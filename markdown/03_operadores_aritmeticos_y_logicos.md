@@ -123,6 +123,14 @@ print("a >= b:", a >= b)  # Devuelve False
 print("a <= b:", a <= b)  # Devuelve True
 ```
 
+    a == b: False
+    a != b: True
+    a > b: False
+    a < b: True
+    a >= b: False
+    a <= b: True
+
+
 #### Ejercicio práctico:
 
 Escribe un programa que solicite al usuario dos números y luego aplique todos los operadores de comparación, mostrando los resultados.
@@ -152,6 +160,10 @@ print("Resultado:", resultado)
 resultado_2 = (x + z > y) or (z - y > x)  # Devuelve True
 print("Resultado 2:", resultado_2)
 ```
+
+    Resultado: True
+    Resultado 2: True
+
 
 ### Ejercicio práctico:
 

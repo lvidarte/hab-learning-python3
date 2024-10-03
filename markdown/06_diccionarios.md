@@ -28,10 +28,16 @@ Se puede acceder a los valores de un diccionario usando la clave correspondiente
 
 ```python
 print(mi_diccionario["nombre"])  # Imprime 'Juan'
-print(mi_diccionario.get("edad"))  # Imprime '30'
 ```
 
     Juan
+
+
+
+```python
+print(mi_diccionario.get("edad"))  # Imprime '30'
+```
+
     30
 
 
@@ -63,14 +69,25 @@ print(mi_diccionario)
 
 ```python
 print(mi_diccionario.keys())  # Devuelve las claves
-print(mi_diccionario.values())  # Devuelve los valores
+```
 
+    dict_keys(['nombre', 'edad', 'ciudad', 'profesión'])
+
+
+
+```python
+print(mi_diccionario.values())  # Devuelve los valores
+```
+
+    dict_values(['Juan', 31, 'Madrid', 'Ingeniero'])
+
+
+
+```python
 mi_diccionario.pop("ciudad")  # Elimina el par clave-valor con clave 'ciudad'
 print(mi_diccionario)
 ```
 
-    dict_keys(['nombre', 'edad', 'ciudad', 'profesión'])
-    dict_values(['Juan', 31, 'Madrid', 'Ingeniero'])
     {'nombre': 'Juan', 'edad': 31, 'profesión': 'Ingeniero'}
 
 
@@ -97,14 +114,32 @@ El rebanado (slicing) permite acceder a una porción de una lista o tupla utiliz
 ```python
 numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(numeros[2:5])  # Imprime los elementos de índice 2 a 4: [2, 3, 4]
-print(numeros[:4])  # Imprime los primeros cuatro elementos: [0, 1, 2, 3]
-print(numeros[5:])  # Imprime desde el índice 5 hasta el final: [5, 6, 7, 8, 9]
-print(numeros[::2])  # Imprime los elementos con un salto de 2: [0, 2, 4, 6, 8]
 ```
 
     [2, 3, 4]
+
+
+
+```python
+print(numeros[:4])  # Imprime los primeros cuatro elementos: [0, 1, 2, 3]
+```
+
     [0, 1, 2, 3]
+
+
+
+```python
+print(numeros[5:])  # Imprime desde el índice 5 hasta el final: [5, 6, 7, 8, 9]
+```
+
     [5, 6, 7, 8, 9]
+
+
+
+```python
+print(numeros[::2])  # Imprime los elementos con un salto de 2: [0, 2, 4, 6, 8]
+```
+
     [0, 2, 4, 6, 8]
 
 
@@ -177,6 +212,9 @@ nombres = {"Juan": 30, "Ana": 25, "Luis": 35}
 nombres_mayores_30 = {clave: valor for clave, valor in nombres.items() if valor > 30}
 print(nombres_mayores_30)  # Imprime {'Luis': 35}
 ```
+
+    {'Luis': 35}
+
 
 #### Ejercicio práctico:
 

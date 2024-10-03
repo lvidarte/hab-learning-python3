@@ -50,26 +50,46 @@ Algunos métodos útiles de las listas incluyen:
 ```python
 frutas.append("naranja")  # Agrega 'naranja' al final
 print(frutas)
+```
 
+    ['manzana', 'mango', 'cereza', 'naranja']
+
+
+
+```python
 frutas.insert(1, "kiwi")  # Inserta 'kiwi' en la posición 1
 print(frutas)
+```
 
+    ['manzana', 'kiwi', 'mango', 'cereza', 'naranja']
+
+
+
+```python
 frutas.remove("manzana")  # Elimina 'manzana'
 print(frutas)
+```
 
+    ['kiwi', 'mango', 'cereza', 'naranja']
+
+
+
+```python
 ultima_fruta = frutas.pop()  # Elimina el último elemento y lo guarda
 print("Última fruta eliminada:", ultima_fruta)
 print(frutas)
+```
 
+    Última fruta eliminada: naranja
+    ['kiwi', 'mango', 'cereza']
+
+
+
+```python
 frutas.sort()  # Ordena la lista alfabéticamente
 print(frutas)
 ```
 
-    ['manzana', 'mango', 'cereza', 'naranja']
-    ['manzana', 'kiwi', 'mango', 'cereza', 'naranja']
-    ['kiwi', 'mango', 'cereza', 'naranja']
-    Última fruta eliminada: naranja
-    ['kiwi', 'mango', 'cereza']
     ['cereza', 'kiwi', 'mango']
 
 
@@ -177,7 +197,7 @@ mi_conjunto = {"manzana", "banana", "cereza"}
 print(mi_conjunto)
 ```
 
-    {'manzana', 'banana', 'cereza'}
+    {'cereza', 'banana', 'manzana'}
 
 
 #### 5. Métodos de conjuntos
@@ -197,28 +217,48 @@ Los conjuntos permiten operaciones como:
 ```python
 mi_conjunto.add("naranja")  # Agrega 'naranja' al conjunto
 print(mi_conjunto)
+```
 
+    {'cereza', 'banana', 'manzana', 'naranja'}
+
+
+
+```python
 mi_conjunto.remove("banana")  # Elimina 'banana' del conjunto
 print(mi_conjunto)
+```
 
+    {'cereza', 'manzana', 'naranja'}
+
+
+
+```python
 # Conjuntos para realizar operaciones:
 A = {1, 2, 3, 4}
 B = {3, 4, 5, 6}
 
 union = A.union(B)  # Unión de A y B
 print("Unión:", union)
+```
 
+    Unión: {1, 2, 3, 4, 5, 6}
+
+
+
+```python
 interseccion = A.intersection(B)  # Intersección de A y B
 print("Intersección:", interseccion)
+```
 
+    Intersección: {3, 4}
+
+
+
+```python
 diferencia = A.difference(B)  # Elementos en A que no están en B
 print("Diferencia:", diferencia)
 ```
 
-    {'manzana', 'naranja', 'banana', 'cereza'}
-    {'manzana', 'naranja', 'cereza'}
-    Unión: {1, 2, 3, 4, 5, 6}
-    Intersección: {3, 4}
     Diferencia: {1, 2}
 
 

@@ -26,6 +26,9 @@ else:
     print("x es menor que 5")
 ```
 
+    x es mayor que 5
+
+
 #### Ejercicio práctico:
 
 Crea un programa que dado un número `n` determine si es positivo, negativo o cero usando estructuras condicionales.
@@ -60,6 +63,13 @@ while i <= 5:
     i += 1  # Incrementamos i para evitar un bucle infinito
 ```
 
+    1
+    2
+    3
+    4
+    5
+
+
 #### Ejercicio práctico:
 
 Escribe un programa que imprima los números del 1 al 10 utilizando un bucle `while`.
@@ -88,6 +98,14 @@ for letra in "Python":
     print(letra)
 ```
 
+    P
+    y
+    t
+    h
+    o
+    n
+
+
 El bucle anterior imprimirá cada letra de la palabra "Python".
 
 #### Ejercicio práctico:
@@ -110,6 +128,13 @@ La función `range()` genera una secuencia de números y es útil cuando necesit
 for i in range(5):  # Genera los números de 0 a 4
     print(i)
 ```
+
+    0
+    1
+    2
+    3
+    4
+
 
 #### Ejercicio práctico:
 

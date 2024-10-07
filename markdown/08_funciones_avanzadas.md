@@ -6,14 +6,16 @@
 
 En Python, puedes definir argumentos opcionales en una función estableciendo un valor por defecto para los parámetros. Si el usuario no proporciona un valor para ese argumento, se utilizará el valor por defecto.
 
-#### Ejemplo de argumento opcional:
+#### a. Función con argumento opcional
 
 
 ```python
 def saludar(nombre, mensaje="Hola"):
     print(f"{mensaje}, {nombre}!")
+```
 
-# Llamada a la función con el argumento opcional
+
+```python
 saludar("Ana")  # Usa el valor por defecto para 'mensaje'
 saludar("Pedro", "Buenas tardes")  # Proporciona un valor personalizado
 ```
@@ -22,7 +24,7 @@ saludar("Pedro", "Buenas tardes")  # Proporciona un valor personalizado
     Buenas tardes, Pedro!
 
 
-#### Ejercicio práctico:
+#### b. Ejercicio práctico
 
 Crea una función llamada `calcular_precio()` que reciba dos parámetros: `precio` y `descuento`, donde `descuento` sea opcional y por defecto tenga un valor del 10%. Si el descuento no se proporciona, la función aplicará el 10%.
 
@@ -35,20 +37,23 @@ Crea una función llamada `calcular_precio()` que reciba dos parámetros: `preci
 
 Puedes llamar a una función utilizando el nombre de los parámetros en lugar de su posición. Esto se conoce como "argumentos por palabra clave" (keyword arguments), y es útil para mejorar la legibilidad y evitar errores.
 
-##### Ejemplo con argumentos por palabra clave:
+#### a. Función con argumentos por palabra clave
 
 
 ```python
 def describir_persona(nombre, edad, ciudad):
     print(f"Nombre: {nombre}, Edad: {edad}, Ciudad: {ciudad}")
+```
 
+
+```python
 describir_persona(edad=30, ciudad="Madrid", nombre="Sofia")  # Se pueden cambiar las posiciones
 ```
 
     Nombre: Sofia, Edad: 30, Ciudad: Madrid
 
 
-#### Ejercicio práctico:
+#### b. Ejercicio práctico
 
 Crea una función llamada `mostrar_informacion()` que acepte tres parámetros: `nombre`, `ocupacion`, y `edad`, pero permite al usuario pasar estos parámetros en cualquier orden al llamar la función utilizando palabras clave.
 
@@ -61,28 +66,33 @@ Crea una función llamada `mostrar_informacion()` que acepte tres parámetros: `
 
 Puedes usar `*args` para aceptar un número variable de argumentos posicionales y `**kwargs` para aceptar un número variable de argumentos por palabra clave.
 
-#### Ejemplo con `*args`:
+#### a. Recibir parámetros con `*args`:
 
 
 ```python
-def sumar_numeros(*numeros):
-    return sum(numeros)
+def sumar_numeros(*args):
+    return sum(args)
+```
 
-print(sumar_numeros(1, 2, 3, 4))  # Devuelve 10
+
+```python
+print(sumar_numeros(1, 2, 3, 4))
 ```
 
     10
 
 
-#### Ejemplo con `**kwargs`:
-
+#### b. Recibir parámetros con `**kwargs`
 
 
 ```python
 def detalles_producto(**kwargs):
     for clave, valor in kwargs.items():
         print(f"{clave}: {valor}")
+```
 
+
+```python
 detalles_producto(nombre="Laptop", marca="Dell", precio=1500)
 ```
 
@@ -91,7 +101,7 @@ detalles_producto(nombre="Laptop", marca="Dell", precio=1500)
     precio: 1500
 
 
-#### Ejercicio práctico:
+#### c. Ejercicio práctico
 
 Crea una función llamada `registro_evento()` que acepte un número variable de asistentes (usando `*args`) y detalles opcionales sobre el evento (usando `**kwargs`).
 
@@ -111,9 +121,7 @@ El "alcance" o **scope** de una variable determina dónde se puede acceder a ell
 - **Local**: Las variables definidas dentro de una función solo son accesibles dentro de esa función.
 - **Global**: Las variables definidas fuera de cualquier función pueden ser accesibles en todo el programa.
 
-#### Ejemplo de variables locales:
-
-#### Ejemplo de variables globales:
+#### a. Variables locales
 
 
 ```python
@@ -128,7 +136,7 @@ otra_funcion()  # Imprime 20
     20
 
 
-#### Ejercicio práctico:
+#### b. Ejercicio práctico
 
 Crea una función llamada `mostrar_valores()` que imprima una variable local `a` y una variable global `b`.
 
@@ -141,7 +149,7 @@ Crea una función llamada `mostrar_valores()` que imprima una variable local `a`
 
 Para modificar una variable global dentro de una función, se debe utilizar la palabra clave `global`.
 
-##### Ejemplo de modificación de una variable global:
+#### a. Modificación de una variable global
 
 
 ```python
@@ -160,7 +168,7 @@ print("Valor fuera de la función:", z)  # Imprime 10
     Valor fuera de la función: 10
 
 
-#### Ejercicio práctico:
+#### b. Ejercicio práctico
 
 Escribe una función llamada `incrementar()` que incremente una variable global `contador` cada vez que se llame. Usa la palabra clave `global` para modificar `contador` desde dentro de la función.
 
@@ -174,7 +182,7 @@ Escribe una función llamada `incrementar()` que incremente una variable global 
 
 Dentro de funciones anidadas, se puede acceder y modificar variables de la función externa usando la palabra clave `nonlocal`.
 
-#### Ejemplo con `nonlocal`:
+#### a. Uso de `nonlocal`
 
 
 ```python
@@ -196,7 +204,7 @@ funcion_externa()
     Dentro de funcion_externa: modificada
 
 
-#### Ejercicio práctico:
+#### b. Ejercicio práctico
 
 Escribe dos funciones anidadas: `exterior()` e `interior()`. Usa `nonlocal` en `interior()` para modificar una variable definida en `exterior()`.
 

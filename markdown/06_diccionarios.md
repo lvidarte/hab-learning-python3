@@ -6,7 +6,7 @@
 
 Los diccionarios en Python son colecciones de pares clave-valor, donde cada clave es única y se utiliza para acceder a su valor asociado. Se definen usando llaves `{}`.
 
-#### Ejemplo básico de un diccionario:
+#### a. Definición de un diccionario
 
 
 ```python
@@ -21,7 +21,7 @@ print(mi_diccionario)
     {'nombre': 'Juan', 'edad': 30, 'ciudad': 'Madrid'}
 
 
-#### 2. Acceso a valores
+#### b. Acceso a valores
 
 Se puede acceder a los valores de un diccionario usando la clave correspondiente.
 
@@ -41,11 +41,9 @@ print(mi_diccionario.get("edad"))  # Imprime '30'
     30
 
 
-#### 3. Modificación de valores
+#### c. Modificación de valores
 
 Los valores en un diccionario pueden ser modificados, agregando nuevos pares clave-valor o cambiando el valor de una clave existente.
-
-##### Ejemplo:
 
 
 ```python
@@ -57,14 +55,12 @@ print(mi_diccionario)
     {'nombre': 'Juan', 'edad': 31, 'ciudad': 'Madrid', 'profesión': 'Ingeniero'}
 
 
-#### 4. Métodos útiles de los diccionarios
+#### d. Métodos más usados de los diccionarios
 
 - **keys()**: Devuelve las claves del diccionario.
 - **values()**: Devuelve los valores del diccionario.
 - **items()**: Devuelve los pares clave-valor como tuplas.
 - **pop()**: Elimina una clave y su valor asociado.
-
-##### Ejemplo:
 
 
 ```python
@@ -91,7 +87,7 @@ print(mi_diccionario)
     {'nombre': 'Juan', 'edad': 31, 'profesión': 'Ingeniero'}
 
 
-#### Ejercicio práctico:
+#### e. Ejercicio práctico
 
 Crea un diccionario que contenga información de un libro (título, autor, año, género). Modifica el género del libro y elimina el año de publicación.
 
@@ -108,7 +104,7 @@ Crea un diccionario que contenga información de un libro (título, autor, año,
 
 El rebanado (slicing) permite acceder a una porción de una lista o tupla utilizando el operador `:`.
 
-#### Ejemplo de rebanado en listas:
+#### a. Operaciones de rebanado en listas
 
 
 ```python
@@ -143,7 +139,7 @@ print(numeros[::2])  # Imprime los elementos con un salto de 2: [0, 2, 4, 6, 8]
     [0, 2, 4, 6, 8]
 
 
-#### Ejercicio práctico:
+#### b. Ejercicio práctico
 
 Dada una lista de 10 números enteros, imprime los primeros 5 números y los últimos 3 utilizando rebanado.
 
@@ -156,7 +152,7 @@ Dada una lista de 10 números enteros, imprime los primeros 5 números y los úl
 
 La comprensión de listas es una manera concisa de crear listas a partir de secuencias o condiciones, y puede reemplazar bucles for tradicionales.
 
-#### Ejemplo básico de comprensión de listas:
+#### a. Ejemplo básico de comprensión de listas:
 
 
 ```python
@@ -167,7 +163,7 @@ print(cuadrados)
     [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 
-##### Comprensión de listas con condiciones:
+#### b. Comprensión de listas con condiciones
 
 
 ```python
@@ -178,7 +174,7 @@ print(pares)
     [0, 2, 4, 6, 8]
 
 
-#### Ejercicio práctico:
+#### c. Ejercicio práctico
 
 Crea una lista con los números del 1 al 20, y usa comprensión de listas para generar otra lista con solo los números impares.
 
@@ -191,7 +187,7 @@ Crea una lista con los números del 1 al 20, y usa comprensión de listas para g
 
 Puedes iterar sobre los pares clave-valor de un diccionario, aplicar condiciones, o crear nuevos diccionarios con comprensión de diccionarios.
 
-#### Ejemplo de iteración sobre diccionarios:
+#### a. Ejemplo de iteración sobre diccionarios
 
 
 ```python
@@ -204,7 +200,7 @@ for clave, valor in mi_diccionario.items():
     profesión: Ingeniero
 
 
-##### Comprensión de diccionarios:
+#### b. Comprensión de diccionarios
 
 
 ```python
@@ -216,7 +212,7 @@ print(nombres_mayores_30)  # Imprime {'Luis': 35}
     {'Luis': 35}
 
 
-#### Ejercicio práctico:
+#### c. Ejercicio práctico
 
 Crea un diccionario que contenga nombres y edades de 5 personas. Luego, crea un nuevo diccionario que contenga solo aquellas personas cuya edad sea mayor a 30 años, utilizando comprensión de diccionarios.
 

@@ -6,30 +6,79 @@
 
 Las estructuras condicionales permiten que un programa ejecute diferentes bloques de código dependiendo de si una condición es verdadera o falsa.
 
-#### Sintaxis básica:
+#### a. Sintaxis básica
 
 - **if**: Evalúa una condición. Si es verdadera, ejecuta el bloque de código asociado.
 - **elif**: Se usa después de un `if` para evaluar otra condición si la primera es falsa.
 - **else**: Se ejecuta si todas las condiciones anteriores son falsas.
 
-##### Ejemplo:
+#### b. Ejemplos
 
 
 ```python
-x = 10
+# Usando sólo if
 
-if x > 5:
-    print("x es mayor que 5")
-elif x == 5:
-    print("x es igual a 5")
-else:
-    print("x es menor que 5")
+edad = 18
+
+if edad >= 18:
+    print("Persona mayor de edad.")
 ```
 
-    x es mayor que 5
+    Persona mayor de edad.
 
 
-#### Ejercicio práctico:
+
+```python
+# Usando if-else
+
+edad = 18
+
+if edad >= 18:
+    print("Persona mayor de edad.")
+else:
+    print("Persona menor de edad.")
+```
+
+    Persona mayor de edad.
+
+
+
+```python
+# Ejemplo completo
+
+num = 10
+
+if num > 5:
+    print("num es mayor que 5")
+elif num == 5:
+    print("num es igual a 5")
+else:
+    print("num es menor que 5")
+```
+
+    num es mayor que 5
+
+
+#### c. Anidación de estructuras condicionales
+
+
+```python
+lugar = "La Coruña"
+llueve = True
+
+if lugar == "La Coruña":
+    if llueve:
+        print("En La Coruña está lloviendo.")
+    else:
+        print("En La Coruña no está lloviendo.")
+else:
+    print("No estamos en La Coruña.")
+```
+
+    En La Coruña está lloviendo.
+
+
+#### d. Ejercicio práctico
 
 Crea un programa que dado un número `n` determine si es positivo, negativo o cero usando estructuras condicionales.
 
@@ -46,14 +95,14 @@ Crea un programa que dado un número `n` determine si es positivo, negativo o ce
 
 El bucle `while` ejecuta un bloque de código mientras una condición sea verdadera. Si la condición nunca cambia a `False`, el bucle puede ser infinito.
 
-#### Sintaxis básica:
+#### a. Sintaxis básica:
 
 ```python
 while condición:
     # código a ejecutar mientras la condición sea verdadera
 ```
 
-##### Ejemplo:
+#### b. Bucle clásico
 
 
 ```python
@@ -70,7 +119,22 @@ while i <= 5:
     5
 
 
-#### Ejercicio práctico:
+Si bien esta forma de uso es correcta, casi nunca veremos algo así en Python. Más adelante veremos que existe una forma más elegante de hacer lo mismo.
+
+#### c. Bucle infinito
+
+Otra forma común de usar `while` es mediante un bucle infinito y la sentencia `break`:
+
+
+```python
+while True:
+    respuesta = input("Parar? (y/n)")
+    if respuesta.lower() == 'y':
+        print("Parando...")
+        break
+```
+
+#### c. Ejercicio práctico
 
 Escribe un programa que imprima los números del 1 al 10 utilizando un bucle `while`.
 
@@ -81,19 +145,20 @@ Escribe un programa que imprima los números del 1 al 10 utilizando un bucle `wh
 
 ### 2. Bucle `for`
 
-El bucle `for` en Python itera sobre una secuencia (como una lista, una cadena, o un rango de números).
+El bucle `for` en Python itera sobre una secuencia (como una cadena, una lista, o un rango de números).
 
-#### Sintaxis básica:
+#### a. Sintaxis básica
 
 ```python
 for variable in secuencia:
     # código a ejecutar en cada iteración
 ```
 
-##### Ejemplo:
+#### b. Ejemplo
 
 
 ```python
+# Imprimir cada letra de la palabra Python
 for letra in "Python":
     print(letra)
 ```
@@ -106,26 +171,27 @@ for letra in "Python":
     n
 
 
-El bucle anterior imprimirá cada letra de la palabra "Python".
+#### c. Ejercicio práctico
 
-#### Ejercicio práctico:
-
-Escribe un programa que recorra una lista de números y calcule su suma utilizando un bucle `for`.
+Escribe un programa que, utilizando un bucle `for`, cuente el total de mayúsculas y minúsculas en una cadena ingresada por el usuario. Ayuda: usar los métodos `islower()` y `isupper()` de la clase `str`.
 
 
 ```python
 
 ```
 
-## 3. Uso de `range()`
+### 3. Uso de `range()`
 
 La función `range()` genera una secuencia de números y es útil cuando necesitas un rango de valores en un bucle `for`.
 
-##### Ejemplo:
+#### a. Uso básico de `range`
+
+En este caso, usamos `range(fin)` para generar un rango que comienza en 0 y termina en fin menos uno.
 
 
 ```python
-for i in range(5):  # Genera los números de 0 a 4
+# Genera los números de 0 a 4
+for i in range(5):
     print(i)
 ```
 
@@ -136,20 +202,96 @@ for i in range(5):  # Genera los números de 0 a 4
     4
 
 
-#### Ejercicio práctico:
+#### b. Uso de `range()` definiendo inicio y fin
 
-Escribe un programa que imprima los números del 1 al 20 usando `range()`.
+En este caso, usamos `range(inicio, fin)` para generar un rango que comienza desde un número específico y termina en fin menos uno.
+
+
+```python
+# Genera números del 5 al 9
+for numero in range(5, 10):
+    print(numero)
+```
+
+    5
+    6
+    7
+    8
+    9
+
+
+#### c. Uso de `range()` con tres parámetros (incluyendo paso)
+
+Aquí usamos `range(inicio, fin, paso)`, lo que permite definir un paso para controlar cómo aumenta o disminuye el rango.
+
+
+```python
+# Genera números del 0 al 10 con un paso de 2
+for numero in range(0, 11, 2):
+    print(numero)
+```
+
+    0
+    2
+    4
+    6
+    8
+    10
+
+
+#### d. Uso de `range()` con un rango decreciente
+
+En este ejemplo, usamos un rango que va hacia atrás, es decir, un rango decreciente. Esto se logra usando un valor negativo para el paso.
+
+
+```python
+# Genera números del 10 al 1, descendiendo
+for numero in range(10, 0, -1):
+    print(numero)
+```
+
+    10
+    9
+    8
+    7
+    6
+    5
+    4
+    3
+    2
+    1
+
+
+#### e. Uso de `range()` ignorando su valor de retorno
+
+Existen casos en los cuales sólo nos interesa iterar algo un cierto número de veces y lo devuelvo por `range()` no nos es útil. En estos casos la convención es usar `_` como nombre de variable, y de esa forma indicar visualmente que la variable no se usará.
+
+
+```python
+for _ in range(4):
+    print("SOS")
+```
+
+    SOS
+    SOS
+    SOS
+    SOS
+
+
+#### f. Ejercicio práctico
+
+Escribe un programa que, utilizando un bucle `for`, pida al usuario el ingreso de cinco enteros y calcule su suma.
 
 
 ```python
 
 ```
 
-#### Ejercicio de combinación de estructuras de control
+### 4. Combinación de estructuras de control
 
-Combina condicionales y bucles para crear un programa que pida al usuario un número del 1 al 10, e imprima la tabla de multiplicar de ese número (del 1 al 10).
+Es posible combinar bucles y estructuras condicionales.
 
-##### Ejemplo:
+#### a. Ejemplo: imprimir la tabla de multiplicar de un número dado
 
 
 ```python
@@ -175,3 +317,12 @@ else:
     2 x 9 = 18
     2 x 10 = 20
 
+
+#### b. Ejercicio práctico
+
+Escribe un programa que, mientras el usuario elija continuar, pida un número del 1 al 10 e imprima su tabla de multiplicar.
+
+
+```python
+
+```

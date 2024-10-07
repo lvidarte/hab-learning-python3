@@ -6,12 +6,12 @@
 
 Python tiene varios tipos de datos básicos. A continuación, se describen los más comunes:
 
-- **Números**:
   - **Enteros (int)**: Números enteros, positivos o negativos, sin decimales. Ejemplo: `42`, `-3`.
   - **Flotantes (float)**: Números reales, que pueden incluir decimales. Ejemplo: `3.14`, `-0.001`.
   - **Cadenas (str)**: Secuencias de caracteres que se utilizan para representar texto. Las cadenas se pueden definir con comillas simples o dobles. Ejemplo: `'Hola, mundo!'`, `"Python es genial!"`.
   - **Booleanos (bool)**: Representan valores de verdad. Solo pueden ser `True` o `False`.
 
+#### a. Ejemplos
 
 
 ```python
@@ -39,7 +39,15 @@ type(3.14)
 
 
 ```python
-print("hola", type("hola"))
+print("hola mundo")
+```
+
+    hola mundo
+
+
+
+```python
+print('hola', type('hola'))
 ```
 
     hola <class 'str'>
@@ -53,7 +61,7 @@ print(True, type(True), False, type(False))
     True <class 'bool'> False <class 'bool'>
 
 
-### 2. Conversión de tipos
+#### b. Conversión de tipos
 
 Es posible convertir entre diferentes tipos de datos utilizando funciones integradas, como:
 
@@ -61,7 +69,7 @@ Es posible convertir entre diferentes tipos de datos utilizando funciones integr
 - `float()`: Convierte un valor a flotante.
 - `str()`: Convierte un valor a cadena.
 
-#### Ejemplo de conversión de tipos:
+##### Ejemplos
 
 
 ```python
@@ -99,7 +107,7 @@ type(str(100))
 
 
 
-### 3. Ejercicio práctico
+#### c. Ejercicio práctico
 
 1. Defina un número entero, un número flotante, y una cadena.
 2. Imprima cada uno de ellos y su tipo utilizando `type()`.
@@ -126,15 +134,16 @@ Para asignar un valor a una variable, se utiliza el operador `=`. La sintaxis es
 nombre_variable = valor
 ```
 
-#### Ejemplo de asignación de variables:
-
+#### a. Ejemplo de asignación de variables
 
 
 ```python
 # Variable de tipo int
 num = 10
+```
 
-# Al inicializar una variable el valor no se muestra en pantalla.
+
+```python
 # Para ver el valor de la variable podemos usar print
 print(num)
 ```
@@ -162,7 +171,7 @@ print(en_ejecucion, type(en_ejecucion))
     True <class 'bool'>
 
 
-### 3. Nombres de variables
+#### b. Nombres de variables
 
 Los nombres de las variables deben seguir ciertas reglas:
 
@@ -170,8 +179,31 @@ Los nombres de las variables deben seguir ciertas reglas:
 - No pueden comenzar con un número.
 - No pueden contener espacios ni caracteres especiales.
 - No pueden ser palabras reservadas de Python (como `if`, `for`, `while`, etc.).
+- Minúsculas y mayúsculas son diferentes, aunque no se usa mayúsculas para variables (ver pep8).
 
-### 4. Ejercicio práctico
+#### c. Nombres válidos de variables
+
+
+```python
+entero = 10
+```
+
+
+```python
+decimal = 4.9
+```
+
+
+```python
+_cadena = "soy un objeto str"
+```
+
+
+```python
+CONSTANTE = "Sigo siendo un objeto str pero no debo ser modificada"
+```
+
+#### d. Ejercicio práctico
 
 1. Define al menos tres variables de diferentes tipos (int, float, str).
 2. Imprime el valor y el tipo de cada variable.

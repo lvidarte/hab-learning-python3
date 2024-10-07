@@ -6,7 +6,7 @@
 
 En Python, se pueden leer archivos utilizando la función `open()` en combinación con varios modos de apertura. El modo más común es el modo de lectura (`"r"`), que permite abrir un archivo y leer su contenido.
 
-#### Ejemplo de lectura de un archivo de texto:
+#### a. Lectura de un archivo de texto
 
 
 ```python
@@ -25,7 +25,7 @@ print(contenido)
 
 En este ejemplo, el archivo `archivo.txt` se abre en modo lectura (`"r"`), y su contenido se lee usando `read()`. Utilizamos `with` para asegurarnos de que el archivo se cierre automáticamente al final del bloque.
 
-#### Lectura línea por línea:
+#### b. Lectura línea por línea
 
 
 ```python
@@ -45,7 +45,7 @@ Aquí, el archivo se lee línea por línea usando un bucle `for`, lo que resulta
 
 Para escribir en un archivo, se usa el modo de escritura (`"w"`) o el modo de añadir contenido (`"a"`). El modo `"w"` sobrescribirá el archivo si ya existe, mientras que `"a"` añadirá el nuevo contenido al final del archivo.
 
-#### Ejemplo de escritura en un archivo de texto:
+#### a. Creación/Escritura de un archivo de texto
 
 
 ```python
@@ -61,7 +61,7 @@ Este código crea un archivo `archivo.txt` (o lo sobrescribe si ya existe) y esc
 
 Python ofrece soporte nativo para manipular archivos CSV (valores separados por comas) a través del módulo `csv`.
 
-#### Ejemplo de lectura de un archivo CSV:
+#### a. Lectura de un archivo CSV
 
 
 ```python
@@ -81,7 +81,7 @@ with open("datos.csv", newline='') as archivo_csv:
 
 Este ejemplo muestra cómo leer un archivo CSV y mostrar cada fila como una lista.
 
-#### Ejemplo de escritura en un archivo CSV:
+#### b. Escritura en un archivo CSV
 
 
 ```python
@@ -97,7 +97,7 @@ with open("datos.csv", "w", newline='') as archivo_csv:
 
 Aquí, se escribe un archivo CSV llamado `salida.csv` con tres columnas (`Nombre`, `Edad`, `Ciudad`) y dos filas de datos.
 
-#### Ejercicio práctico:
+#### c. Ejercicio práctico
 
 Crea un archivo `mi_inventario.csv` donde escribas una lista de productos con sus nombres, precios y cantidades. Luego, lee ese archivo y muestra los productos disponibles.
 
@@ -137,8 +137,11 @@ Crea un archivo `mi_inventario.csv` donde escribas una lista de productos con su
 
 ### Actividades finales:
 
-- **Ejercicio global**: Crear una pequeña aplicación en Python que lea un archivo CSV de productos, permita añadir o eliminar productos, y guarde los cambios en el mismo archivo.
-  
 - **Discusión de dudas**: Abordar cualquier duda que quede pendiente sobre los temas tratados durante el curso.
 
+- **Ejercicio global**: Crear una pequeña aplicación en Python que lea un archivo CSV de productos, permita añadir o eliminar productos, y guarde los cambios en el mismo archivo.
 
+
+```python
+
+```

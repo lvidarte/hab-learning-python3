@@ -6,7 +6,7 @@
 
 Las listas en Python son colecciones ordenadas y mutables, lo que significa que puedes modificar sus elementos después de haberlas creado. Se definen usando corchetes `[]`.
 
-#### Ejemplo básico de una lista:
+#### a. Definición de una lista
 
 
 ```python
@@ -17,11 +17,9 @@ print(frutas)
     ['manzana', 'banana', 'cereza']
 
 
-#### 2. Acceso y modificación de elementos
+#### b. Acceso y modificación de elementos
 
 Puedes acceder a los elementos de una lista mediante su índice, y modificar los elementos directamente.
-
-##### Ejemplo:
 
 
 ```python
@@ -34,7 +32,7 @@ print(frutas)
     ['manzana', 'mango', 'cereza']
 
 
-#### 3. Métodos comunes de las listas
+#### c. Métodos comunes de las listas
 
 Algunos métodos útiles de las listas incluyen:
 
@@ -44,7 +42,7 @@ Algunos métodos útiles de las listas incluyen:
 - **pop()**: Elimina el elemento en una posición específica (por defecto, el último).
 - **sort()**: Ordena los elementos de la lista.
 
-##### Ejemplo:
+##### Ejemplos
 
 
 ```python
@@ -93,11 +91,9 @@ print(frutas)
     ['cereza', 'kiwi', 'mango']
 
 
-#### 4. Listas anidadas
+#### d. Listas anidadas
 
 Las listas pueden contener otras listas, lo que se llama listas anidadas.
-
-##### Ejemplo:
 
 
 ```python
@@ -110,7 +106,37 @@ print(lista_anidada[1][1])  # Acceso a 'pepino'
     pepino
 
 
-#### Ejercicio práctico:
+#### e. Iterar una lista con `for`
+
+Puedo recorrer todos los elementos de una lista mediante el uso de `for`
+
+
+```python
+for fruta in ["banana", "manzana", "pera"]:
+    print(f"{fruta=}")
+```
+
+    fruta='banana'
+    fruta='manzana'
+    fruta='pera'
+
+
+#### f. Obtener el índice de los elementos de la lista al iterar con `for`
+
+Si además de los elementos de una lista, necesito tambíen sus índices, puedo usar la función `enumerate()` 
+
+
+```python
+for indice, fruta in enumerate(["banana", "manzana", "pera"]):
+    print(f"{indice}. {fruta}")
+```
+
+    0. banana
+    1. manzana
+    2. pera
+
+
+#### g. Ejercicio práctico
 
 Crea una lista con al menos 5 números enteros. Luego, realiza las siguientes acciones:
 1. Agrega un número al final de la lista.
@@ -131,7 +157,7 @@ Crea una lista con al menos 5 números enteros. Luego, realiza las siguientes ac
 
 Las tuplas son similares a las listas, pero a diferencia de estas, son inmutables (no se pueden modificar una vez creadas). Se definen usando paréntesis `()`.
 
-#### Ejemplo básico de una tupla:
+#### a. Definición de una tupla:
 
 
 ```python
@@ -142,11 +168,9 @@ print(mi_tupla)
     ('manzana', 'banana', 'cereza')
 
 
-#### 2. Acceso a elementos en una tupla
+#### b. Acceso a elementos en una tupla
 
 Puedes acceder a los elementos de una tupla de la misma manera que en las listas, usando índices, pero no puedes modificar sus elementos.
-
-##### Ejemplo:
 
 
 ```python
@@ -159,11 +183,9 @@ print(mi_tupla[1])  # Acceso al segundo elemento: 'banana'
     banana
 
 
-#### 3. Conversión de tuplas a listas
+#### c. Conversión de tuplas a listas
 
 Si necesitas modificar una tupla, puedes convertirla temporalmente a una lista, hacer los cambios y volver a convertirla en tupla.
-
-##### Ejemplo:
 
 
 ```python
@@ -176,7 +198,7 @@ print(mi_tupla)
     (1, 'mango', 3)
 
 
-#### Ejercicio práctico:
+#### d. Ejercicio práctico
 
 Crea una tupla con 4 colores diferentes. Luego, convierte la tupla en una lista, cambia el segundo color, y vuelve a convertir la lista en tupla.
 
@@ -185,11 +207,11 @@ Crea una tupla con 4 colores diferentes. Luego, convierte la tupla en una lista,
 
 ```
 
-### 4. Conjuntos
+### 2. Conjuntos
 
 Los conjuntos son colecciones desordenadas y no permiten elementos duplicados. Se definen usando llaves `{}` o la función `set()`.
 
-#### Ejemplo básico de un conjunto:
+#### a. Definición de un conjunto
 
 
 ```python
@@ -200,7 +222,7 @@ print(mi_conjunto)
     {'cereza', 'banana', 'manzana'}
 
 
-#### 5. Métodos de conjuntos
+#### b. Métodos más usados en conjuntos
 
 Los conjuntos permiten operaciones como:
 
@@ -211,7 +233,7 @@ Los conjuntos permiten operaciones como:
 - **intersection()**: Devuelve los elementos comunes entre dos conjuntos.
 - **difference()**: Devuelve los elementos que están en el primer conjunto pero no en el segundo.
 
-##### Ejemplo:
+##### Ejemplos
 
 
 ```python
@@ -219,7 +241,7 @@ mi_conjunto.add("naranja")  # Agrega 'naranja' al conjunto
 print(mi_conjunto)
 ```
 
-    {'cereza', 'banana', 'manzana', 'naranja'}
+    {'cereza', 'banana', 'naranja', 'manzana'}
 
 
 
@@ -228,7 +250,7 @@ mi_conjunto.remove("banana")  # Elimina 'banana' del conjunto
 print(mi_conjunto)
 ```
 
-    {'cereza', 'manzana', 'naranja'}
+    {'cereza', 'naranja', 'manzana'}
 
 
 
@@ -262,7 +284,7 @@ print("Diferencia:", diferencia)
     Diferencia: {1, 2}
 
 
-#### Ejercicio práctico:
+#### c. Ejercicio práctico
 
 Crea dos conjuntos con números enteros. Luego:
 1. Realiza la unión de ambos conjuntos.

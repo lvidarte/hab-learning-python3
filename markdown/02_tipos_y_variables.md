@@ -185,22 +185,22 @@ Los nombres de las variables deben seguir ciertas reglas:
 
 
 ```python
-entero = 10
+x_ = 10
 ```
 
 
 ```python
-decimal = 4.9
+y0 = 4.9
 ```
 
 
 ```python
-_cadena = "soy un objeto str"
+_zen_de_python = "Simple es mejor que complejo"
 ```
 
 
 ```python
-CONSTANTE = "Sigo siendo un objeto str pero no debo ser modificada"
+CONSTANTE = 100
 ```
 
 #### d. Ejercicio práctico

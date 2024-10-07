@@ -100,6 +100,10 @@
    - Tkinter  
      - Biblioteca estándar de Python para crear interfaces gráficas de usuario (GUIs). Simple y fácil de usar para proyectos pequeños.  
      - [https://docs.python.org/3/library/tkinter.html](https://docs.python.org/3/library/tkinter.html)
+
+   - Kivy
+     - Kivy es un framework de desarrollo de aplicaciones multiplataformas, caracterizado por centrarse en el diseño de interfaz de usuarios innovadoras que se adaptan a los nuevos tiempos.
+     - [https://kivy.org/](https://kivy.org/)
    
    - PyQt  
      - Framework robusto para crear aplicaciones con interfaces gráficas avanzadas, basado en la biblioteca Qt.  
@@ -109,10 +113,6 @@
    - PyGame  
      - Biblioteca ideal para el desarrollo de juegos en 2D y aplicaciones multimedia en Python. Ofrece una interfaz simple para gestionar gráficos, sonido y eventos.  
      - [https://www.pygame.org/](https://www.pygame.org/)
-
-   - Tivy  
-     - Un motor gráfico ligero y fácil de usar para desarrollar videojuegos y aplicaciones gráficas en Python.  
-     - [https://github.com/velocy/Tivy](https://github.com/velocy/Tivy)
 
 #### 7. Módulos para Microcontroladores y IoT
    - MicroPython  

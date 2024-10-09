@@ -33,8 +33,11 @@ Python es utilizado en una amplia variedad de campos:
 - **Aplicaciones de escritorio** y más.
 
 ### 3. Historia y evolución de Python
-- Creado a fines de los 80 por Guido van Rossum, inspirado en lenguajes como ABC.
-- Python ha pasado por varias versiones importantes, siendo la transición de Python 2 a Python 3 (en 2008) un momento clave en su evolución.
+- Python fue creado a fines de los años 80 por **Guido van Rossum**, inspirado en lenguajes como ABC, con el objetivo de diseñar un lenguaje fácil de aprender y utilizar, pero lo suficientemente poderoso para resolver problemas complejos.
+- La primera versión oficial, **Python 0.9.0**, fue lanzada en **1991**, e incluía características clave que hoy son fundamentales, como las excepciones, las funciones, y las clases con herencia.
+- En **2000**, con la llegada de **Python 2.0**, se incorporaron importantes características como la recolección de basura (garbage collection) y las listas por comprensión (list comprehensions).
+- La transición de **Python 2 a Python 3**, iniciada en **2008**, marcó un momento clave en su evolución, ya que Python 3 introdujo mejoras significativas en la consistencia del lenguaje y la gestión de Unicode, aunque también rompió la compatibilidad con versiones anteriores, lo que obligó a los desarrolladores a migrar su código.
+- Hoy en día, **Python 3** es la versión estándar, con actualizaciones regulares que mejoran el rendimiento, la seguridad y las características del lenguaje, asegurando su vigencia y relevancia en campos tan diversos como el desarrollo web, la ciencia de datos, la automatización y la inteligencia artificial.
 
 ---
 

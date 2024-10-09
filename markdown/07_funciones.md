@@ -25,12 +25,12 @@ saludar()
 
 #### b. Ventajas de usar funciones
 
-Las funciones permiten:
+Las funciones ofrecen las siguientes ventajas:
 
-- Reutilizar código
-- Dividir un programa en partes más pequeñas y manejables
-- Evitar la repetición de código
-- Abstracción
+- **Reutilización de código**: Permiten usar el mismo bloque de código en diferentes partes del programa sin tener que escribirlo nuevamente.
+- **Modularidad**: Dividen un programa en partes más pequeñas y manejables, lo que facilita su comprensión y mantenimiento.
+- **Reducción de la duplicación**: Evitan la repetición de código, lo que mejora la eficiencia y reduce el riesgo de errores.
+- **Abstracción**: Permiten ocultar detalles de implementación, enfocándose en lo que la función hace en lugar de cómo lo hace.
 
 #### c. Ejercicio práctico
 
@@ -190,54 +190,6 @@ print(f"Suma: {resultado_suma}, Resta: {resultado_resta}")
 #### c. Ejercicio práctico
 
 Escribe una función llamada `calcular_potencia()` que reciba dos números como parámetros y devuelva el resultado de elevar el primero al segundo.
-
-
-```python
-
-```
-
-### 3. Funciones con parámetros variables
-
-A veces, es útil definir funciones que puedan recibir un número variable de argumentos usando `*args` o `**kwargs`.
-
-#### a. Ejemplo con `*args`
-
-
-```python
-def sumar_todos(*numeros):
-    return sum(numeros)
-```
-
-
-```python
-print(sumar_todos(1, 2, 3, 4))
-```
-
-    10
-
-
-#### b. Ejemplo con `**kwargs`
-
-
-```python
-def detalles_persona(**kwargs):
-    for clave, valor in kwargs.items():
-        print(f"{clave}: {valor}")
-```
-
-
-```python
-detalles_persona(nombre="Laura", edad=25, ciudad="Galicia")
-```
-
-    nombre: Laura
-    edad: 25
-    ciudad: Galicia
-
-
-#### c. Ejercicio práctico
-
-Escribe una función llamada `calcular_total()` que reciba un número variable de precios y devuelva la suma de todos los precios.
 
 
 ```python

@@ -173,7 +173,7 @@ for letra in "Python":
 
 #### c. Ejercicio práctico
 
-Escribe un programa que, utilizando un bucle `for`, cuente el total de mayúsculas y minúsculas en una cadena ingresada por el usuario. Ayuda: usar los métodos `islower()` y `isupper()` de la clase `str`.
+Escribe un programa que, utilizando un bucle `for`, cuente cuántas letras mayúsculas y cuántas minúsculas hay en una cadena ingresada por el usuario. Tip: utiliza los métodos `islower()` e `isupper()` de la clase `str` para identificar el tipo de letra.
 
 
 ```python

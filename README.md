@@ -117,7 +117,7 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 #### [Anexo](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/98_anexo.md):
 
- - Este apartado sirve de referencia para los estudiantes durante todo el curso, proporcionando una comprensión sólida de la función `print()`, `input()` y el formato de cadenas de texto usando f-strings.
+ - Este apartado sirve de referencia para los estudiantes durante todo el curso, proporcionando una comprensión sólida de la función `print()`, `input()` y el formato de cadenas de texto usando f-strings. El Anexo, además, incluye una sección donde se describe `PEP8` y su importancia en el trabajo colaborativo, destacando conceptos como legibilidad y mantenibilidad del código.
 
 #### [Referencias](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/99_referencias.md):
 

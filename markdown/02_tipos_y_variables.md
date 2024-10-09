@@ -109,9 +109,7 @@ type(str(100))
 
 #### c. Ejercicio práctico
 
-1. Defina un número entero, un número flotante, y una cadena.
-2. Imprima cada uno de ellos y su tipo utilizando `type()`.
-3. Realiza conversiones entre tipos y muestra los resultados.
+Define un número entero, un número flotante y una cadena de texto. Imprime el valor de cada uno junto con su tipo utilizando la función `type()`. Luego, realiza conversiones entre los diferentes tipos de datos y muestra los resultados.
 
 
 ```python
@@ -205,9 +203,7 @@ CONSTANTE = 100
 
 #### d. Ejercicio práctico
 
-1. Define al menos tres variables de diferentes tipos (int, float, str).
-2. Imprime el valor y el tipo de cada variable.
-3. Realiza cambios en los valores de las variables y vuelve a imprimirlos.
+Define al menos tres variables de diferentes tipos (int, float, str) e imprime el valor y el tipo de cada variable. Realiza cambios en los valores de las variables y vuelve a imprimirlos.
 
 
 ```python

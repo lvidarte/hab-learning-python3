@@ -27,7 +27,7 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Formas de ejecutar Python y entorno de trabajo (Google Colab)  
   Los estudiantes aprenderán las diferentes formas de ejecutar Python, como en terminales, entornos de desarrollo (IDEs), y notebooks interactivos. Se introducirá el uso de Jupyter Notebook con énfasis en Google Colab, el entorno que se utilizará durante el curso. Se explicará cómo crear y compartir notebooks, y los beneficios de trabajar en la nube.
 
-- [Clase 1 - Material adicional](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/01_intro_2.md)  
+- [Clase 1 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/01_intro_2.md)  
   Este documento complementa la clase 1, proporcionando información más detallada sobre algunos de los temas abordados y, además, introduciendo nuevos conceptos relevantes para ampliar la comprensión del contenido.
 
 #### [Clase 2](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/02_tipos_y_variables.md):

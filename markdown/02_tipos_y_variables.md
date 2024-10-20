@@ -109,10 +109,16 @@ type(str(100))
 
 #### c. Ejercicio práctico
 
-Define un número entero, un número flotante y una cadena de texto. Imprime el valor de cada uno junto con su tipo utilizando la función `type()`. Luego, realiza conversiones entre los diferentes tipos de datos y muestra los resultados.
+Imprime el valor y el tipo de:
+  1. Un número entero
+  2. Un número flotante
+  3. Una cadena de texto
+
+Luego, realiza conversiones entre los diferentes tipos de datos y muestra los resultados.
 
 
 ```python
+
 
 ```
 

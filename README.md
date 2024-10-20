@@ -39,7 +39,7 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
   Los estudiantes aprenderán a declarar variables, la sintaxis de asignación y las convenciones para nombrarlas. Se abordará el concepto de tipo dinámico.
 
 - [Clase 2 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/02_tipos_y_variables_2.md)  
-  Este documento complementa la clase 1, proporcionando información más detallada sobre algunos de los temas abordados y, además, introduciendo nuevos conceptos relevantes para ampliar la comprensión del contenido.
+  Este documento complementa la clase 2, proporcionando información más detallada sobre algunos de los temas abordados y, además, introduciendo nuevos conceptos relevantes para ampliar la comprensión del contenido.
 
 #### [Clase 3](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/03_operadores_aritmeticos_y_logicos.md):
 

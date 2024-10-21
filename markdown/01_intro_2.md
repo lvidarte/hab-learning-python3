@@ -60,10 +60,6 @@ Los usuarios de Python se refieren a menudo a la filosofía de Python, que es ba
 - Si la implementación es fácil de explicar, puede que sea una buena idea.
 - Los espacios de nombres (namespaces) son una gran idea. ¡Hagamos más de esas cosas!
 
-#### f. Resumen
-
-La historia de Python es un testimonio de su crecimiento y evolución a lo largo de más de tres décadas. Desde su creación por Guido van Rossum hasta la transición a Python 3, el lenguaje ha sido diseñado para ser accesible y versátil, adaptándose a las necesidades cambiantes de los desarrolladores. Python ha llegado a ser uno de los lenguajes de programación más populares del mundo, utilizado en diversas áreas como desarrollo web, ciencia de datos, inteligencia artificial y automatización, gracias a su enfoque en la legibilidad y su potente ecosistema de bibliotecas.
-
 ---
 
 ### 2. Python como Lenguaje Interpretado
@@ -254,7 +250,7 @@ Python se ha integrado en varios proyectos educativos que permiten a los estudia
 
 - [Raspberry Pi](https://raspberrypi.org/): Este pequeño ordenador de bajo costo ha revolucionado la enseñanza de la programación y la informática. Con Python, los estudiantes pueden programar aplicaciones, controlar dispositivos y crear proyectos interactivos. Raspberry Pi es utilizado en aulas de todo el mundo para enseñar desde conceptos básicos de programación hasta proyectos avanzados de IoT (Internet de las Cosas).
 
-- [Microbit](https://microbit.org/): Diseñado específicamente para la educación, el Microbit es una placa de desarrollo que permite a los estudiantes programar dispositivos de forma sencilla. Con un entorno de programación que incluye Python, los usuarios pueden crear proyectos como juegos, dispositivos de medición y aplicaciones interactivas. La combinación de hardware y software fomenta el aprendizaje práctico y creativo.
+- [Microbit](https://microbit.org/): Diseñado específicamente para la educación, Microbit es una placa de desarrollo que permite a los estudiantes programar dispositivos de forma sencilla. Con un entorno de programación que incluye Python, los usuarios pueden crear proyectos como juegos, dispositivos de medición y aplicaciones interactivas. La combinación de hardware y software fomenta el aprendizaje práctico y creativo.
 
 - [Arduino](https://arduino.cc/): Aunque Arduino utiliza principalmente C/C++, Python puede ser integrado a través de bibliotecas y herramientas como MicroPython. Esto permite a los estudiantes combinar la programación de hardware con el aprendizaje de Python, fomentando el desarrollo de proyectos en robótica y electrónica.
 
@@ -272,15 +268,15 @@ El conocimiento de Python no solo es valioso para estudiantes que desean seguir 
 
 #### a. Características Clave de MicroPython
 
-1. Ligero y Eficiente: MicroPython está diseñado para funcionar en dispositivos con poca memoria y capacidad de procesamiento. Esto significa que se ha optimizado para ocupar menos espacio y consumir menos recursos en comparación con la implementación estándar de Python.
+1. **Ligero y Eficiente**: MicroPython está diseñado para funcionar en dispositivos con poca memoria y capacidad de procesamiento. Esto significa que se ha optimizado para ocupar menos espacio y consumir menos recursos en comparación con la implementación estándar de Python.
 
-2. Interactividad: Al igual que Python, MicroPython permite la programación interactiva. Esto significa que los desarrolladores pueden utilizar un REPL (Read-Eval-Print Loop) para probar comandos y scripts de forma inmediata, facilitando el desarrollo y la depuración.
+2. **Interactividad**: Al igual que Python, MicroPython permite la programación interactiva. Esto significa que los desarrolladores pueden utilizar un REPL (Read-Eval-Print Loop) para probar comandos y scripts de forma inmediata, facilitando el desarrollo y la depuración.
 
-3. Soporte para Hardware: MicroPython proporciona bibliotecas específicas para interactuar con hardware, como pines GPIO, comunicación I2C, SPI y más. Esto permite a los usuarios controlar componentes electrónicos como sensores, motores y pantallas directamente desde su código Python.
+3. **Soporte para Hardware**: MicroPython proporciona bibliotecas específicas para interactuar con hardware, como pines GPIO, comunicación I2C, SPI y más. Esto permite a los usuarios controlar componentes electrónicos como sensores, motores y pantallas directamente desde su código Python.
 
-4. Sintaxis Familiar: Al ser una implementación de Python, MicroPython mantiene la misma sintaxis y estructura que Python, lo que facilita la transición para aquellos que ya están familiarizados con el lenguaje. Esto hace que MicroPython sea una excelente opción para educadores y principiantes en el ámbito de la programación de hardware.
+4. **Sintaxis Familiar**: Al ser una implementación de Python, MicroPython mantiene la misma sintaxis y estructura que Python, lo que facilita la transición para aquellos que ya están familiarizados con el lenguaje. Esto hace que MicroPython sea una excelente opción para educadores y principiantes en el ámbito de la programación de hardware.
 
-5. Portabilidad: Aunque MicroPython está diseñado para ejecutarse en diferentes plataformas de hardware, como el ESP8266, ESP32 y Raspberry Pi Pico, el código Python que se escribe generalmente puede ser portado fácilmente entre estas plataformas con pocos o ningún cambio.
+5. **Portabilidad**: Aunque MicroPython está diseñado para ejecutarse en diferentes plataformas de hardware, como ESP8266, ESP32 y Raspberry Pi Pico, el código Python que se escribe generalmente puede ser portado fácilmente entre estas plataformas con pocos o ningún cambio.
 
 #### b. Ejemplo de Código en MicroPython
 
@@ -301,7 +297,3 @@ while True:
 ```
 
 En este ejemplo, se importa la clase `Pin` desde el módulo `machine`, se configura un pin como salida, y luego se utiliza un bucle infinito para encender y apagar un LED cada segundo. La simplicidad de la sintaxis de MicroPython permite a los desarrolladores centrarse en la lógica del hardware sin complicaciones innecesarias.
-
-#### c. Resumen
-
-MicroPython amplía el alcance de Python al mundo de la programación embebida, permitiendo que los desarrolladores utilicen un lenguaje familiar en proyectos de electrónica. Con su enfoque ligero, soporte de hardware y sintaxis sencilla, MicroPython es una herramienta poderosa para la educación, la creación de prototipos y el desarrollo de aplicaciones en dispositivos con recursos limitados. Su capacidad para hacer que Python sea accesible en entornos de hardware abre nuevas oportunidades para innovaciones y aprendizaje en la programación de sistemas embebidos.

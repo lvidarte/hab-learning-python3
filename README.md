@@ -49,6 +49,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Operadores de comparación  
   Se verá cómo comparar valores en Python utilizando operadores como `==`, `!=`, `<`, `>` y su uso en expresiones lógicas.
 
+- [Clase 3 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/03_operadores_aritmeticos_y_logicos_2.md)  
+  Este documento complementa la clase 3, proporcionando información más detallada sobre los distintos operadores y su precedencia, y explicando el concepto de palabra reservada en Python.
+
 #### [Clase 4](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/04_estructuras_de_control.md):
 
 - Módulo 1: Estructuras de control - Condicionales  
@@ -56,6 +59,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 - Módulo 2: Estructuras de control - Bucles `for` y `while`  
   Introducción a los bucles en Python para repetir acciones de manera eficiente.
+
+- [Clase 4 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/04_estructuras_de_control_2.md)  
+  Este documento complementa la clase 4, proporcionando información más detallada sobre las estructuras de control, la definición de bloques en Python, explicando las diferencias entre el bluce for en Python y otros lenguajes de programación, y definiendo el concepto de iterables.
 
 #### [Clase 5](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/05_listas_tuplas_y_conjuntos.md):
 

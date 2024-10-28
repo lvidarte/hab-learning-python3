@@ -394,7 +394,14 @@ print(result)
 
 #### c. Ejercicio práctico
 
-Escribe un programa que combine operadores aritméticos y de comparación, usando también operadores lógicos `and`, `or` o `not`. El programa debe evaluar si una serie de operaciones matemáticas cumplen con una condición específica.
+Escribe un programa en Python que realice las siguientes tareas:
+
+1. Solicita al usuario que ingrese dos números.
+2. Utiliza operadores aritméticos para calcular la suma y la diferencia de esos números.
+3. Evalúa las siguientes condiciones utilizando operadores de comparación y lógicos (`and`, `or`, `not`):
+   - Comprueba si la suma de los dos números es mayor que 10 **y** si la diferencia es menor que 5.
+   - Alternativamente, verifica si la suma es menor o igual a 10 **o** si la diferencia es mayor o igual a 5.
+4. Muestra un mensaje que indique si se cumplen o no, las condiciones evaluadas en el paso anterior.
 
 
 ```python

@@ -337,7 +337,7 @@ En Python, los operadores de comparación y lógicos tienen un **orden de preced
    - **AND** (`and`) – Evaluación lógica condicional.
    - **OR** (`or`) – Evaluación lógica condicional (precedencia más baja).
 
-##### c. Ejemplos
+#### c. Ejemplos
 
 
 ```python

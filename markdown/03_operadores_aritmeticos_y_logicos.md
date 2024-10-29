@@ -144,9 +144,7 @@ Define dos variables de tipo `float` y aplica todos los operadores aritméticos 
 
 ```
 
-## 2. Operadores lógicos
-
-### Operadores lógicos
+### 2. Operadores lógicos
 
 Los operadores lógicos permiten realizar operaciones que resultan en valores booleanos (`True` o `False`).
 
@@ -339,7 +337,7 @@ En Python, los operadores de comparación y lógicos tienen un **orden de preced
    - **AND** (`and`) – Evaluación lógica condicional.
    - **OR** (`or`) – Evaluación lógica condicional (precedencia más baja).
 
-##### Ejemplos
+##### c. Ejemplos
 
 
 ```python
@@ -392,7 +390,7 @@ print(result)
     True
 
 
-#### c. Ejercicio práctico
+#### d. Ejercicio práctico
 
 Escribe un programa en Python que realice las siguientes tareas:
 

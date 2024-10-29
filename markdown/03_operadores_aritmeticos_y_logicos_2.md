@@ -347,7 +347,7 @@ Python soporta varias notaciones numéricas para representar y trabajar con dist
 
 
 
-### 2. Resumen de notaciones numéricas en Python
+#### g. Resumen de notaciones numéricas en Python
 
 | Notación               | Prefijo    | Ejemplo Literal  | Tipo de Datos |
 |------------------------|------------|------------------|---------------|
@@ -499,7 +499,7 @@ bin(a >> 2)  # Resultado: 0b10 (2 en decimal)
 
 
 
-### 2. Resumen de ejemplos de operadores de bits
+#### g. Resumen de ejemplos de operadores de bits
 
 | Operador    | Ejemplo             | Resultado Binario | Resultado Decimal |
 |-------------|----------------------|-------------------|-------------------|

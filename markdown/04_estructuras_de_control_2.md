@@ -78,6 +78,224 @@ if x > 5:
 
 ---
 
+### 3. Ejercicios con `if` `else`
+
+#### a. Calcular el precio de un producto con descuento
+
+Pide al usuario el precio de un producto y aplica un descuento según este criterio:
+   - Si el precio es mayor a 1000, aplica un 15% de descuento.
+   - Si está entre 500 y 1000, aplica un 10% de descuento.
+   - Si es menor a 500, aplica un 5% de descuento.
+Muestra el precio final con el descuento aplicado.
+
+```python
+# Ejemplo de salida esperada:
+# Precio del producto: 750
+# Resultado: El precio final con descuento es de 675.0
+```
+
+
+```python
+
+```
+
+#### b. Descuento por cantidad comprada
+
+Escribe un programa que pida al usuario el precio de un producto y la cantidad de unidades que quiere comprar. Aplica un descuento basado en la cantidad:
+   - Si compra entre 1 y 5 unidades, aplica un 5% de descuento.
+   - Si compra entre 6 y 10 unidades, aplica un 10% de descuento.
+   - Si compra más de 10 unidades, aplica un 15% de descuento.
+
+Muestra el precio final con el descuento aplicado.
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa el precio del producto: 200
+# Ingresa la cantidad de unidades: 8
+# Resultado: El precio final con descuento es 1440.0
+```
+
+
+```python
+
+```
+
+#### c. Cálculo de aumento de precio según la categoría del producto
+
+Pide al usuario ingresar el precio de un producto y la categoría a la que pertenece:
+   - "A": aplica un aumento del 20%
+   - "B": aplica un aumento del 10%
+   - "C": aplica un aumento del 5%
+
+Si la categoría ingresada no es válida, muestra un mensaje de error. Calcula el precio final con el aumento y muestra el resultado.
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa el precio del producto: 150
+# Ingresa la categoría (A/B/C): B
+# Resultado: El precio final con aumento es 165.0
+```
+
+
+```python
+
+```
+
+#### d. Calificación de un estudiante
+
+Escribe un programa que le pida al usuario una calificación entre 0 y 100 y que determine la letra correspondiente:
+   - 90 a 100: "A"
+   - 80 a 89: "B"
+   - 70 a 79: "C"
+   - 60 a 69: "D"
+   - Menor a 60: "F"
+
+Muestra la letra correspondiente.
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa la calificación: 85
+# Resultado: La calificación es B
+```
+
+
+```python
+
+```
+
+#### e. Clasificación de temperaturas
+
+Escribe un programa que pida al usuario una temperatura en grados Celsius entre -100 y 100, y la clasifique en:
+   - Menor a 0: "Frío extremo"
+   - Entre 0 y 15: "Frío"
+   - Entre 16 y 25: "Templado"
+   - Mayor a 25: "Calor"
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa la temperatura en Celsius: 18
+# Resultado: La temperatura es templada.
+```
+
+
+```python
+
+```
+
+#### f. Verificar acceso según el rol de usuario
+
+Solicita al usuario que ingrese su rol en una plataforma (administrador, editor o visitante) y muestra un mensaje con los permisos correspondientes:
+   - Administrador: “Tienes acceso total.”
+   - Editor: “Tienes acceso limitado para editar.”
+   - Visitante: “Tienes acceso de solo lectura.”
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa tu rol (administrador/editor/visitante): editor
+# Resultado: Tienes acceso limitado para editar.
+```
+
+
+```python
+
+```
+
+#### g. Determinar si un número es divisible entre 2 y entre 3
+
+Solicita al usuario un número y verifica si es divisible entre 2, entre 3 o entre ambos.
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa un número: 12
+# Resultado: El número es divisible entre 2 y entre 3.
+```
+
+
+```python
+
+```
+
+#### h. Verificar la longitud de una palabra
+
+Escribe un programa que pida al usuario una palabra y verifique su longitud:
+   - Menos de 4 caracteres: “Palabra corta.”
+   - Entre 4 y 8 caracteres: “Palabra de longitud media.”
+   - Más de 8 caracteres: “Palabra larga.”
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa una palabra: programación
+# Resultado: Palabra larga.
+```
+
+
+```python
+
+```
+
+#### i. Tipo de triángulo según los lados
+
+Escribe un programa que pida al usuario tres números enteros que representan los lados de un triángulo: 
+   - Equilátero: todos los lados iguales
+   - Isósceles: dos lados iguales
+   - Escaleno: todos los lados diferentes
+
+Si los valores no cumplen con la propiedad de un triángulo válido (la suma de dos lados debe ser mayor al tercer lado), muestra un mensaje indicando que no forman un triángulo.
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa el primer lado: 5
+# Ingresa el segundo lado: 5
+# Ingresa el tercer lado: 8
+# Resultado: Es un triángulo isósceles.
+```
+
+
+```python
+
+```
+
+#### j. Verificar condiciones meteorológicas complejas
+
+Pide al usuario la temperatura y el nivel de humedad. Luego, determina el tipo de clima:
+   - Si la temperatura es menor a 10°C y la humedad es mayor al 80%, indica "Frío y húmedo".
+   - Si la temperatura es menor a 10°C y la humedad es menor o igual a 80%, indica "Frío y seco".
+   - Si la temperatura está entre 10°C y 25°C y la humedad es mayor al 60%, indica "Templado y húmedo".
+   - Si la temperatura está entre 10°C y 25°C y la humedad es menor o igual a 60%, indica "Templado y seco".
+   - Si la temperatura es mayor a 25°C, verifica si la humedad es mayor a 50% para indicar "Caluroso y húmedo" o "Caluroso y seco" en caso contrario.
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa la temperatura en °C: 27
+# Ingresa el nivel de humedad (%): 40
+# Resultado: Caluroso y seco.
+```
+
+
+```python
+
+```
+
+#### k. Verificar contraseña segura
+
+Escribe un programa que pida una contraseña al usuario y la verifique según los siguientes criterios:
+   - Si tiene menos de 8 caracteres: "Contraseña débil"
+   - Si tiene 8 caracteres o más, pero no contiene ni números ni caracteres especiales, muestra "Contraseña moderada"
+   - Si cumple con tener 8 caracteres o más, y además contiene números y al menos un carácter especial (!, @, #, $, %, &, *), muestra "Contraseña segura".
+
+```python
+# Ejemplo de salida esperada:
+# Ingresa tu contraseña: clave123!
+# Resultado: Contraseña segura.
+```
+
+
+```python
+
+```
+
+---
+
 ### 3. Diferencias entre el bucle `for` tradicional y el `for` en Python
 
 El bucle `for` es una estructura de control fundamental que se utiliza para iterar sobre una secuencia de elementos, como listas, tuplas o cadenas. Sin embargo, la forma en que se implementa varía entre los lenguajes de programación. A continuación, se analizan las diferencias entre un bucle `for` tradicional, como el que se encuentra en C o Java, y el bucle `for` en Python.

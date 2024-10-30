@@ -296,7 +296,7 @@ Escribe un programa que pida una contraseña al usuario y la verifique según lo
 
 ---
 
-### 3. Diferencias entre el bucle `for` tradicional y el `for` en Python
+### 4. Diferencias entre el bucle `for` tradicional y el `for` en Python
 
 El bucle `for` es una estructura de control fundamental que se utiliza para iterar sobre una secuencia de elementos, como listas, tuplas o cadenas. Sin embargo, la forma en que se implementa varía entre los lenguajes de programación. A continuación, se analizan las diferencias entre un bucle `for` tradicional, como el que se encuentra en C o Java, y el bucle `for` en Python.
 
@@ -388,7 +388,7 @@ El bucle `for` es una estructura de control fundamental que se utiliza para iter
 
 ---
 
-### 4. ¿Qué es un Iterable en Python?
+### 5. ¿Qué es un Iterable en Python?
 
 Un **iterable** en Python es cualquier objeto que se puede recorrer en un bucle. Esto significa que puedes usar un `for` para acceder a sus elementos uno por uno. Los iterables son fundamentales en Python, ya que permiten trabajar con colecciones de datos de manera eficiente.
 
@@ -442,9 +442,7 @@ for i in range(5):  # Itera desde 0 hasta 4
 
 ---
 
-### 5. Ejercicios con estructuras de control
-
-Aquí tienes diez ejercicios para practicar las estructuras de control `for` y `while` en Python:
+### 6. Ejercicios con `for` y `while`
 
 #### a. Sumar números
 Escribe un programa que pida al usuario un número entero positivo `n` y calcule la suma de todos los números desde 1 hasta `n` utilizando un bucle `for`.

@@ -276,24 +276,6 @@ Pide al usuario la temperatura y el nivel de humedad. Luego, determina el tipo d
 
 ```
 
-#### k. Verificar contraseña segura
-
-Escribe un programa que pida una contraseña al usuario y la verifique según los siguientes criterios:
-   - Si tiene menos de 8 caracteres: "Contraseña débil"
-   - Si tiene 8 caracteres o más, pero no contiene ni números ni caracteres especiales, muestra "Contraseña moderada"
-   - Si cumple con tener 8 caracteres o más, y además contiene números y al menos un carácter especial (!, @, #, $, %, &, *), muestra "Contraseña segura".
-
-```python
-# Ejemplo de salida esperada:
-# Ingresa tu contraseña: clave123!
-# Resultado: Contraseña segura.
-```
-
-
-```python
-
-```
-
 ---
 
 ### 4. Diferencias entre el bucle `for` tradicional y el `for` en Python
@@ -494,7 +476,7 @@ Desarrolla un juego donde el programa elige un número aleatorio entre 1 y 100, 
 
 #### e. Contar espacios
 
-Pide al usuario que ingrese un texto y cuenta cuántos espacios hay utilizando un bucle `while`.
+Pide al usuario que ingrese un texto y cuenta cuántos espacios hay utilizando un bucle `for`.
 
 **Pistas:**
 - Recuerda que el objeto str es un iterable.

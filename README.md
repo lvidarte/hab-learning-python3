@@ -71,6 +71,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Tuplas y conjuntos  
   Se enseñarán las diferencias entre listas, tuplas (estructuras inmutables) y conjuntos (colecciones no ordenadas sin duplicados).
 
+- [Clase 5 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/05_listas_tuplas_y_conjuntos_2.md)  
+
 #### [Clase 6](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/06_diccionarios.md):
 
 - Módulo 1: Diccionarios  
@@ -78,6 +80,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 - Módulo 2: Manipulación de estructuras de datos  
   Se verá cómo modificar y acceder a listas, tuplas y diccionarios mediante técnicas de rebanado y comprensión de listas.
+
+- [Clase 6 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/06_diccionarios_2.md)  
 
 #### [Clase 7](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/07_funciones.md):
 

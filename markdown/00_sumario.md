@@ -19,6 +19,10 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 - Conocimientos previos necesarios: No se requiere experiencia previa en Python.
 
+- Requisitos técnicos previos:
+  - **Opción A:** Acceso a una cuenta de Google para trabajar en el entorno de [Google Colab](https://colab.research.google.com/) sin necesidad de instalaciones locales.
+  - **Opción B:** Descarga del [repositorio](https://github.com/lvidarte/hab-learning-python3) y ejecución de [Jupyter Notebook](https://jupyter.org/) en el equipo. Este enfoque requiere tener [Python](https://www.python.org/downloads/), versión 3.9 o superior, instalado en el sistema.
+
 #### Clase 1:
 
 - Módulo 1: Introducción a Python (Conceptos Generales)  
@@ -122,3 +126,5 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 #### Referencias
 
  - Este apartado ofrece tanto un listado de recursos para profundizar el aprendizaje de Python, como así también herramientas populares, usadas en la industria, relacionadas con el lenguaje.
+
+

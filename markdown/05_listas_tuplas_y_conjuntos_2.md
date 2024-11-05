@@ -53,10 +53,9 @@ print(mi_entero)  # Salida: 10 (el entero original no cambió)
 
 La elección entre usar objetos mutables o inmutables depende del contexto y de la necesidad de cambiar o no el valor de los datos almacenados.
 
-
 ---
 
-### 2. Objetos Mutables
+### 2. Objetos mutables
 
 Un objeto **mutable** es aquel que se puede modificar después de su creación, es decir, podemos cambiar su contenido sin crear un nuevo objeto. Entre los tipos mutables más comunes en Python están las **listas**, **diccionarios** y **conjuntos**.
 
@@ -91,7 +90,7 @@ Acá, el diccionario `mi_diccionario` se modifica actualizando el valor de la cl
 
 ---
 
-### 3. Objetos Inmutables
+### 3. Objetos inmutables
 
 Un objeto **inmutable** no se puede modificar una vez que ha sido creado. Esto significa que cualquier "modificación" en un objeto inmutable en realidad crea un nuevo objeto en la memoria. Los tipos inmutables en Python incluyen **enteros**, **flotantes**, **cadenas de texto** (`str`), y **tuplas**.
 
@@ -136,9 +135,9 @@ Las tuplas son inmutables, así que cualquier intento de cambiar uno de sus elem
 
 ---
 
-### 4. Funciones builtin que trabajan con listas
+### 4. Funciones incorporadas (built-in) que trabajan con listas
 
-Python ofrece varias funciones **builtin** (integradas) que hacen que trabajar con listas sea más flexible y permiten realizar muchas operaciones de manera rápida y efectiva en Python.
+Python ofrece varias funciones incorporadas que hacen que trabajar con listas sea más flexible y permiten realizar muchas operaciones de manera rápida y efectiva en Python.
 
 #### a. `len()`
 La función `len()` devuelve la cantidad de elementos de una lista.
@@ -558,7 +557,7 @@ print(cuadrados)
 
 Aquí tienes cinco ejercicios que combinan el uso de conjuntos (`sets`) y listas en Python. Estos ejercicios te ayudarán a practicar cómo trabajar con ambos tipos de datos de manera efectiva.
 
-#### a. Eliminar Duplicados de una Lista
+#### a. Eliminar duplicados de una lista
 
 Dada una lista con elementos duplicados, utiliza un conjunto para crear una nueva lista que contenga solo los elementos únicos.
 
@@ -569,7 +568,7 @@ nombres = ["Ana", "Luis", "Juan", "Ana", "Sofía", "Luis"]
 ```
 
 
-#### b. Encontrar Elementos Comunes entre dos Listas
+#### b. Encontrar elementos comunes entre dos listas
 
 Dadas dos listas, encuentra los elementos que están presentes en ambas y devuelve una lista con esos elementos únicos utilizando conjuntos.
 

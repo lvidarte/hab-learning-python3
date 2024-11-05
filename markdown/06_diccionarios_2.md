@@ -1,5 +1,7 @@
 # Diccionarios y Manipulación de Estructuras de Datos - Material complementario
 
+### 1. Diccionarios
+
 Los **diccionarios** en Python son estructuras de datos muy útiles que nos permiten almacenar pares clave-valor. Son similares a un índice, donde cada clave (como un nombre) tiene asociado un valor (como un número de teléfono o una dirección). A diferencia de las listas, donde los elementos se acceden por un índice numérico, en los diccionarios se accede a los elementos usando claves, lo cual resulta especialmente útil para representar colecciones de datos que se pueden identificar con nombres específicos.
 
 #### a. Características clave de los diccionarios
@@ -10,7 +12,7 @@ Los **diccionarios** en Python son estructuras de datos muy útiles que nos perm
 
 3. **Acceso rápido:** Los diccionarios son altamente eficientes en cuanto al acceso a los datos gracias a su implementación interna, basada en tablas hash. Esto permite que la búsqueda de valores sea rápida.
 
-#### b. Manteniendo el Orden de Creación
+#### b. Manteniendo el orden de creación
 
 A partir de **Python 3.7**, los diccionarios mantienen el orden en el que se agregaron los elementos. Esto significa que, si agregas elementos en un orden específico, al iterar sobre el diccionario, se mantendrá ese orden. Aunque esta característica fue oficialmente documentada en Python 3.7, ya funcionaba así en Python 3.6 como una implementación interna.
 
@@ -164,7 +166,7 @@ precios = {'libro': 200, 'revista': 50, 'marcador': 10}
 
 Estos ejercicios cubren varios usos comunes de slicing en listas.
 
-#### a. Extraer Sublista
+#### a. Extraer sublista
 
 Dada una lista de números, extrae una sublista con los primeros 5 elementos.
 

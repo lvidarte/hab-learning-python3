@@ -96,7 +96,16 @@ Muestra el precio final con el descuento aplicado.
 
 
 ```python
+precio = float(input("Ingresa el precio de un producto: "))
 
+if precio > 1000:
+    precio *= 0.85 # 15% descuento
+elif 500 <= precio < 1000:
+    precio *= 0.9 # 10% descuento
+else:
+    precio *= 0.95 # 5% descuento
+
+print(f"El precio final con descuento es de {precio}")
 ```
 
 #### b. Descuento por cantidad comprada
@@ -117,7 +126,22 @@ Muestra el precio final con el descuento aplicado.
 
 
 ```python
+precio = float(input("Ingresa el precio del producto: "))
+cantidad = int(input("Ingresa la cantidad en unidades: "))
 
+descuento = 0
+
+if 1 <= cantidad <= 5:
+    descuento = 0.95
+elif 6 <= cantidad <= 10:
+    descuento = 0.9
+else:
+    descuento = 0.85
+
+precio_final = precio * cantidad * descuento
+
+print(f"Precio sin descuento: {precio * cantidad}")
+print(f"Resultado: El precio final con descuento es {precio_final:.1f}")
 ```
 
 #### c. Cálculo de aumento de precio según la categoría del producto
@@ -138,7 +162,23 @@ Si la categoría ingresada no es válida, muestra un mensaje de error. Calcula e
 
 
 ```python
+precio = float(input("Ingresa el precio del producto: "))
 
+categoria = input("Ingresa la categoria (A/B/C): ").strip().upper()
+
+if categoria == 'A':
+    aumento = 1.2 # 20%
+elif categoria == 'B':
+    aumento = 1.1
+elif categoria == 'C':
+    aumento = 1.05 # 5%
+else:
+    print("Error: categoría no válida.")
+    exit()
+
+precio_final = precio * aumento
+
+print(f"Resultado: El precio final con aumento es {precio_final:.1f}")
 ```
 
 #### d. Calificación de un estudiante
@@ -160,7 +200,25 @@ Muestra la letra correspondiente.
 
 
 ```python
+calificacion = float(input("Ingresa la calificación (0 a 100): "))
 
+letra = ""
+
+if 0 <= calificacion <= 100:
+    if 90 <= calificacion <= 100:
+        letra = "A"
+    elif 80 <= calificacion < 90:
+        letra = "B"
+    elif 70 <= calificacion < 80:
+        letra = "C"
+    elif 60 <= calificacion < 70:
+        letra = "D"
+    else:  # Menor a 60
+        letra = "F"
+
+    print(f"Resultado: La calificación es {letra}")
+else:
+    print("Error: La calificación debe estar entre 0 y 100.")
 ```
 
 #### e. Clasificación de temperaturas
@@ -179,7 +237,25 @@ Escribe un programa que pida al usuario una temperatura en grados Celsius entre 
 
 
 ```python
+temperatura = float(input("Ingresa la temperatura en Celsius (-100 a 100): "))
 
+clasificacion = ""
+
+if -100 <= temperatura <= 100:
+    # Clasificar la temperatura
+    if temperatura < 0:
+        clasificacion = "Frío extremo"
+    elif 0 <= temperatura <= 15:
+        clasificacion = "Frío"
+    elif 16 <= temperatura <= 25:
+        clasificacion = "Templado"
+    else:  # Mayor a 25
+        clasificacion = "Calor"
+
+    # Mostrar el resultado
+    print(f"Resultado: La temperatura es {clasificacion}.")
+else:
+    print("Error: La temperatura debe estar entre -100 y 100.")
 ```
 
 #### f. Verificar acceso según el rol de usuario
@@ -197,7 +273,18 @@ Solicita al usuario que ingrese su rol en una plataforma (administrador, editor 
 
 
 ```python
+rol = input("Ingresa tu rol (administrador/editor/visitante): ").strip().lower()
 
+if rol == "administrador":
+    mensaje = "Tienes acceso total."
+elif rol == "editor":
+    mensaje = "Tienes acceso limitado para editar."
+elif rol == "visitante":
+    mensaje = "Tienes acceso de solo lectura."
+else:
+    mensaje = "Error: Rol no válido."
+
+print(f"Resultado: {mensaje}")
 ```
 
 #### g. Determinar si un número es divisible entre 2 y entre 3
@@ -212,7 +299,25 @@ Solicita al usuario un número y verifica si es divisible entre 2, entre 3 o ent
 
 
 ```python
+numero = int(input("Ingresa un número: "))
 
+resultado = ""
+
+# Verificar la divisibilidad
+divisible_por_2 = (numero % 2 == 0)
+divisible_por_3 = (numero % 3 == 0)
+
+# Determinar el mensaje según la divisibilidad
+if divisible_por_2 and divisible_por_3:
+    resultado = "El número es divisible entre 2 y entre 3."
+elif divisible_por_2:
+    resultado = "El número es divisible entre 2."
+elif divisible_por_3:
+    resultado = "El número es divisible entre 3."
+else:
+    resultado = "El número no es divisible entre 2 ni entre 3."
+
+print(f"Resultado: {resultado}")
 ```
 
 #### h. Verificar la longitud de una palabra
@@ -230,7 +335,20 @@ Escribe un programa que pida al usuario una palabra y verifique su longitud:
 
 
 ```python
+palabra = input("Ingresa una palabra: ")
 
+# Obtener la longitud de la palabra
+longitud = len(palabra)
+
+
+if longitud < 4:
+    resultado = "Palabra corta."
+elif 4 <= longitud <= 8:
+    resultado = "Palabra de longitud media."
+else:  # Más de 8 caracteres
+    resultado = "Palabra larga."
+
+print(f"Resultado: {resultado}")
 ```
 
 #### i. Tipo de triángulo según los lados
@@ -252,7 +370,23 @@ Si los valores no cumplen con la propiedad de un triángulo válido (la suma de 
 
 
 ```python
+lado1 = int(input("Ingresa el primer lado: "))
+lado2 = int(input("Ingresa el segundo lado: "))
+lado3 = int(input("Ingresa el tercer lado: "))
 
+# Verificar si los lados pueden formar un triángulo
+if (lado1 + lado2 > lado3) and (lado1 + lado3 > lado2) and (lado2 + lado3 > lado1):
+    # Determinar el tipo de triángulo
+    if lado1 == lado2 == lado3:
+        resultado = "Es un triángulo equilátero."
+    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+        resultado = "Es un triángulo isósceles."
+    else:
+        resultado = "Es un triángulo escaleno."
+else:
+    resultado = "No forman un triángulo."
+
+print(f"Resultado: {resultado}")
 ```
 
 #### j. Verificar condiciones meteorológicas complejas
@@ -273,7 +407,28 @@ Pide al usuario la temperatura y el nivel de humedad. Luego, determina el tipo d
 
 
 ```python
+temperatura = float(input("Ingresa la temperatura en °C: "))
+humedad = float(input("Ingresa el nivel de humedad (%): "))
 
+resultado = ""
+
+if temperatura < 10:
+    if humedad > 80:
+        resultado = "Frío y húmedo."
+    else:  # humedad <= 80
+        resultado = "Frío y seco."
+elif 10 <= temperatura <= 25:
+    if humedad > 60:
+        resultado = "Templado y húmedo."
+    else:  # humedad <= 60
+        resultado = "Templado y seco."
+else:  # temperatura > 25
+    if humedad > 50:
+        resultado = "Caluroso y húmedo."
+    else:  # humedad <= 50
+        resultado = "Caluroso y seco."
+
+print(f"Resultado: {resultado}")
 ```
 
 ---
@@ -434,7 +589,14 @@ Escribe un programa que pida al usuario un número entero positivo `n` y calcule
 
 
 ```python
+n = int(input("Ingresa un número entero positivo: "))
 
+suma = 0
+
+for i in range(1, n + 1):
+    suma += i  # Sumar el valor de i a la suma
+
+print(f"La suma de todos los números desde 1 hasta {n} es: {suma}")
 ```
 
 #### b. Contar vocales
@@ -446,7 +608,17 @@ Crea un programa que pida al usuario una frase y cuente cuántas vocales (a, e, 
 
 
 ```python
+frase = input("Ingresa una frase: ")
 
+vocales = "aeiou"
+
+contador_vocales = 0
+
+for char in frase.lower():
+    if char in vocales:
+        contador_vocales += 1
+
+print(f"La cantidad de vocales en la frase es: {contador_vocales}")
 ```
 
 #### c. Números pares con `while`
@@ -458,7 +630,11 @@ Crea un programa que imprima todos los números pares del 1 al 100 utilizando un
 
 
 ```python
+contador = 2
 
+while contador <= 100:
+    print(contador)
+    contador += 2
 ```
 
 #### d. Adivina el número
@@ -471,7 +647,21 @@ Desarrolla un juego donde el programa elige un número aleatorio entre 1 y 100, 
 
 
 ```python
+import random
 
+numero_secreto = random.randint(1, 100)
+
+intento = 0
+
+while intento != numero_secreto:
+    intento = int(input("Adivina el número entre 1 y 100: "))
+
+    if intento < numero_secreto:
+        print("Demasiado bajo. Intenta nuevamente.")
+    elif intento > numero_secreto:
+        print("Demasiado alto. Intenta nuevamente.")
+    else:
+        print("¡Felicidades! Has adivinado el número.")
 ```
 
 #### e. Contar espacios
@@ -483,7 +673,15 @@ Pide al usuario que ingrese un texto y cuenta cuántos espacios hay utilizando u
 
 
 ```python
+texto = input("Ingresa un texto: ")
 
+espacios = 0
+
+for caracter in texto:
+    if caracter == ' ':
+        espacios += 1
+
+print(f"El número de espacios en el texto es: {espacios}")
 ```
 
 #### f. Imprimir un triángulo
@@ -495,7 +693,10 @@ Escribe un programa que imprima un triángulo de asteriscos (`*`). Pide al usuar
 
 
 ```python
+filas = int(input("Ingresa el número de filas: "))
 
+for i in range(1, filas + 1):
+    print('*' * i)
 ```
 
 #### g. Factorial
@@ -508,7 +709,14 @@ Crea un programa que calcule el factorial de un número entero positivo ingresad
 
 
 ```python
+n = int(input("Ingresa un número entero positivo: "))
 
+factorial = 1
+
+for i in range(1, n + 1):  # Desde 1 hasta n (inclusive)
+    factorial *= i  # Multiplicar el acumulador por el número actual
+
+print(f"El factorial de {n} es: {factorial}")
 ```
 
 #### h. Números Fibonacci
@@ -521,5 +729,18 @@ Escribe un programa que imprima los primeros `n` números de la secuencia de Fib
 
 
 ```python
+n = int(input("Ingresa la cantidad de números de Fibonacci que deseas imprimir: "))
 
+# Inicializar los primeros dos números de la secuencia de Fibonacci
+a, b = 0, 1
+
+# Comprobar si n es mayor que 0 para evitar errores
+if n <= 0:
+    print("Por favor, ingresa un número entero positivo.")
+else:
+    print("Los primeros", n, "números de Fibonacci son:")
+
+    for _ in range(n):
+        print(a, end=", ")  # Imprimir el número actual en la secuencia
+        a, b = b, a + b    # Actualizar los valores de a y b
 ```

@@ -325,9 +325,35 @@ anagramas = [
     ('Flamenco', 'Come flan'),
     ('Un legado', 'De alguno'),
 ]
+
+def es_anagrama(cadena1, cadena2):
+    return ''.join(sorted(cadena1.lower())).strip() == ''.join(sorted(cadena2.lower())).strip()
+
+for cadena1, cadena2 in anagramas:
+    print(cadena1, cadena2, es_anagrama(cadena1, cadena2))
 ```
 
+    Amor Roma True
+    Nacionalista Altisonancia True
+    Cobra Barco True
+    Flamenco Come flan True
+    Un legado De alguno True
+
+
 #### b. Escribe una función `obtener_maximo_absoluto` que reciba una lista de números y devuelva el valor absoluto más alto.
+
+
+```python
+def obtener_maximo_absoluto(numeros):
+    return max(abs(num) for num in numeros)
+
+obtener_maximo_absoluto([1, 3, -6, 40, -100])
+```
+
+
+
+
+    100
 
 
 
@@ -335,43 +361,126 @@ anagramas = [
 
 
 ```python
+def calcular_fibonacci(n):
+    a, b = fibo = [0, 1]
+    for _ in range(n - 2):
+        a, b  = b, a + b
+        fibo.append(b)
+    return fibo
 
+
+print(calcular_fibonacci(10))
 ```
+
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
 
 #### d. Escribe una función `es_capicua` que reciba un número entero usando el parámetro `numero` y devuelva `True` si el número es capicúa (se lee igual de izquierda a derecha que de derecha a izquierda) y `False` si no lo es.
 
 
 ```python
+def es_capicua(numero):
+    return str(numero) == str(numero)[::-1]
 
+for numero in [121, 1357531, 444, 899, 900009]:
+    print(numero, es_capicua(numero))
 ```
+
+    121 True
+    1357531 True
+    444 True
+    899 False
+    900009 True
+
 
 #### e. Escribe una función `generar_acronimo` que reciba una frase y devuelva el acrónimo formado por la primera letra de cada palabra, en mayúsculas.
 
 
 ```python
+def generar_acronimo(frase):
+    return ''.join([palabra[0].upper() for palabra in frase.split() if len(palabra) > 3])
 
+frases = [
+    'precio de venta al público',
+    'producto interior bruto',
+    'Diario Oficial de la Comunidad Europea',
+    'Diario Oficial de la Generalitat de Cataluña',
+    'compact disk read only memory',
+]
+
+for frase in frases:
+    print(frase, '-->', generar_acronimo(frase))
 ```
+
+    precio de venta al público --> PVP
+    producto interior bruto --> PIB
+    Diario Oficial de la Comunidad Europea --> DOCE
+    Diario Oficial de la Generalitat de Cataluña --> DOGC
+    compact disk read only memory --> CDROM
+
 
 #### f. Escribe una función `es_bisiesto` que reciba un año y retorne `True` si es bisiesto y `False` si no lo es.
 
 
 ```python
+def es_bisiesto(año):
+    return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
 
+años = [
+    {"año": 1900, "bisiesto": False},  # No bisiesto, divisible por 100 pero no por 400
+    {"año": 2000, "bisiesto": True},   # Bisiesto, divisible por 100 y también por 400
+    {"año": 2004, "bisiesto": True},   # Bisiesto, divisible por 4 y no por 100
+    {"año": 2100, "bisiesto": False},  # No bisiesto, divisible por 100 pero no por 400
+    {"año": 2024, "bisiesto": True},   # Bisiesto, divisible por 4 y no por 100
+    {"año": 2028, "bisiesto": True},   # Bisiesto, divisible por 4 y no por 100
+    {"año": 2200, "bisiesto": False},  # No bisiesto, divisible por 100 pero no por 400
+    {"año": 2400, "bisiesto": True},   # Bisiesto, divisible por 100 y también por 400
+]
+
+for año in años:
+    print(año, '-->', es_bisiesto(año['año']))
 ```
+
+    {'año': 1900, 'bisiesto': False} --> False
+    {'año': 2000, 'bisiesto': True} --> True
+    {'año': 2004, 'bisiesto': True} --> True
+    {'año': 2100, 'bisiesto': False} --> False
+    {'año': 2024, 'bisiesto': True} --> True
+    {'año': 2028, 'bisiesto': True} --> True
+    {'año': 2200, 'bisiesto': False} --> False
+    {'año': 2400, 'bisiesto': True} --> True
+
 
 #### g. Escribe una función `contar_vocales` que reciba una cadena de texto y retorne el total de vocales en la misma, sin importar mayúsculas o minúsculas.
 
 
 ```python
+def contar_vocales(texto):
+    return sum(1 for char in texto.lower() if char in 'aeiouáéíóú')
 
+texto = 'Python es un lenguaje de programación versátil, popular tanto en el ámbito profesional como en el educativo.'
+
+print(f"vocales: {contar_vocales(texto)}")
 ```
+
+    vocales: 40
+
 
 #### h. Escribe una función `factorial` que calcule el factorial de un número no negativo.
 
 
 ```python
+# Ejemplo de recursividad (función que se llama a sí misma)
+def factorial(numero):
+    if numero == 0:
+        return 1
+    return numero * factorial(numero - 1)
 
+print(factorial(10))
 ```
+
+    3628800
+
 
 ---
 
@@ -573,8 +682,42 @@ Crear una función que permita comparar un número secreto con el intento de un 
 
 
 ```python
+import random
 
+MENSAJES = {
+    0: "Ganaste!",
+    1: "El número debe ser menor",
+   -1: "El número debe ser mayor",
+}
+
+def comparar_numeros(numero_secreto: int, intento: int) -> int:
+    if intento > numero_secreto:
+        return 1
+    elif intento < numero_secreto:
+        return -1
+    else:
+        return 0 # son iguales
+
+def jugar():
+    numero_secreto = random.randint(1, 100)
+    while True:
+        intento = int(input("Ingresa el intento: "))
+        resultado = comparar_numeros(numero_secreto, intento)
+        print(MENSAJES[resultado])
+        if resultado == 0:
+            break
+
+jugar()
 ```
+
+    El número debe ser mayor
+    El número debe ser menor
+    El número debe ser menor
+    El número debe ser mayor
+    El número debe ser menor
+    El número debe ser mayor
+    Ganaste!
+
 
 #### b. Juego de dados
 
@@ -624,8 +767,84 @@ El juego terminó en empate.
 
 
 ```python
+import random
 
+def lanzar_dado() -> int:
+    return random.randint(1, 6)
+
+def jugar() -> None:
+    rondas = int(input("¿Cuántas rondas quieres jugar? "))
+    puntaje_humano: int = 0
+    puntaje_computadora: int = 0
+
+    for ronda in range(1, rondas + 1):
+        humano: int = lanzar_dado()
+        computadora: int = lanzar_dado()
+        mostrar_ronda(ronda, humano, computadora)
+        if humano > computadora:
+            puntaje_humano += 1
+        elif computadora > humano:
+            puntaje_computadora += 1
+    
+    mostrar_final_juego(puntaje_humano, puntaje_computadora)
+
+def mostrar_ronda(ronda: int, humano: int, computadora: int) -> None:
+    print(f"\nRonda {ronda}")
+    print(f"Humano: {humano}")
+    print(f"Computadora: {computadora}")
+    mostrar_ganador_ronda(humano, computadora)
+
+def mostrar_final_juego(puntaje_humano: int, puntaje_computadora: int) -> None:
+    print("\nPuntaje final")
+    print(f"Humano: {puntaje_humano}")
+    print(f"Computadora: {puntaje_computadora}")
+    mostrar_ganador_juego(puntaje_humano, puntaje_computadora)
+
+def mostrar_ganador_ronda(humano: int, computadora: int) -> None:
+    if humano > computadora:
+        print("El humano ganó esta ronda.")
+    elif computadora > humano:
+        print("La computadora ganó esta ronda.")
+    else:
+        print("Empate.")
+
+def mostrar_ganador_juego(puntaje_humano: int, puntaje_computadora: int) -> None:
+    if puntaje_humano > puntaje_computadora:
+        print("El humano ganó el juego.")
+    elif puntaje_computadora > puntaje_humano:
+        print("La computadora ganó el juego.")
+    else:
+        print("El juego terminó en empate.")
+
+jugar()
 ```
+
+    
+    Ronda 1
+    Humano: 4
+    Computadora: 4
+    Empate.
+    
+    Ronda 2
+    Humano: 3
+    Computadora: 4
+    La computadora ganó esta ronda.
+    
+    Ronda 3
+    Humano: 5
+    Computadora: 4
+    El humano ganó esta ronda.
+    
+    Ronda 4
+    Humano: 3
+    Computadora: 2
+    El humano ganó esta ronda.
+    
+    Puntaje final
+    Humano: 2
+    Computadora: 1
+    El humano ganó el juego.
+
 
 #### c. Juego de "Piedra, Papel o Tijera"
 
@@ -672,5 +891,60 @@ Gracias por jugar.
 
 
 ```python
+import random
 
+OPCIONES = ['piedra', 'papel', 'tijera']
+
+def opcion_humano() -> str:
+    while True:
+        opcion = input(f"Elige entre {', '.join(OPCIONES)}: ").lower()
+        if opcion in OPCIONES:
+            return opcion
+        else:
+            print("Opción no válida.")
+
+def opcion_computadora() -> str:
+    return random.choice(OPCIONES)
+
+def detectar_ganador(humano: str, computadora: str) -> str:
+    if humano == computadora:
+        return "Empate."
+    elif (humano == 'piedra' and computadora == 'tijera') or \
+         (humano == 'papel' and computadora == 'piedra') or \
+         (humano == 'tijera' and computadora == 'papel'):
+        return "El humano ganó esta ronda."
+    else:
+        return "La computadora ganó esta ronda."
+
+def mostrar_ganador_ronda(humano: str, computadora: str) -> None:
+    print(f"\nHumano: {humano}")
+    print(f"Computadora: {computadora}")
+    print(detectar_ganador(humano, computadora))
+    
+def jugar() -> None:
+    while True:
+        humano = opcion_humano()
+        computadora = opcion_computadora()
+        mostrar_ganador_ronda(humano, computadora)
+        if input("Jugar otra vez? (s/n)").strip().lower() == 'n':
+            print("\nGracias por jugar.")
+            break
+
+jugar()
 ```
+
+    
+    Humano: piedra
+    Computadora: tijera
+    El humano ganó esta ronda.
+    
+    Humano: papel
+    Computadora: piedra
+    El humano ganó esta ronda.
+    
+    Humano: tijera
+    Computadora: tijera
+    Empate.
+    
+    Gracias por jugar.
+

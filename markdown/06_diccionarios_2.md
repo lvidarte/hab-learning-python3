@@ -52,7 +52,21 @@ Crea un diccionario que almacene el conteo de palabras en una oración dada. Pid
 ```python
 texto = "hola mundo hola"
 # Salida esperada: {'hola', 2, 'mundo': 1}
+
+palabras = texto.split()
+conteo_palabras = {}
+
+for palabra in palabras:
+    if palabra in conteo_palabras:
+        conteo_palabras[palabra] += 1
+    else:
+        conteo_palabras[palabra] = 1
+
+print(conteo_palabras)
 ```
+
+    {'hola': 2, 'mundo': 1}
+
 
 #### b. Actualización de inventario
 
@@ -62,7 +76,20 @@ Tienes un diccionario que representa el inventario de una tienda, donde las clav
 ```python
 inventario = {'manzanas': 10, 'naranjas': 5, 'bananas': 7}
 # Salida esperada: {'manzanas': 13, 'naranjas': 5, 'bananas': 7}
+
+producto = input("Ingresa el nombre del producto: ")
+cantidad = int(input("Ingresa la cantidad a agregar: "))
+
+if producto in inventario:
+    inventario[producto] += cantidad
+else:
+    inventario[producto] = cantidad
+
+print(inventario)
 ```
+
+    {'manzanas': 13, 'naranjas': 5, 'bananas': 7}
+
 
 #### c. Invirtiendo claves y valores
 
@@ -72,7 +99,19 @@ Dado un diccionario donde las claves son nombres de estudiantes y los valores so
 ```python
 calificaciones = {'Ana': 10, 'Juan': 8, 'Carlos': 10, 'María': 7}
 # Salida esperada: {10: ['Ana', 'Carlos'], 8: ['Juan'], 7: ['María']}
+
+alumnos_por_nota = {}
+
+for alumno, nota in calificaciones.items():
+    if nota not in alumnos_por_nota:
+        alumnos_por_nota[nota] = []
+    alumnos_por_nota[nota].append(alumno)
+
+print(alumnos_por_nota)
 ```
+
+    {10: ['Ana', 'Carlos'], 8: ['Juan'], 7: ['María']}
+
 
 #### d. Creación de un diccionario de contactos
 
@@ -82,7 +121,19 @@ Pide al usuario que ingrese nombres y números de teléfono, y almacénalos en u
 ```python
 contactos = {}
 # Salida esperada: {'Luis': '12345', 'Ana': '67890'}
+
+while True:
+    nombre = input("Ingresa el nombre (o 'salir' para terminar): ")
+    if nombre == 'salir':
+        break
+    telefono = input("Ingresa el número de teléfono: ")
+    contactos[nombre] = telefono
+
+print(contactos)
 ```
+
+    {'Luis': '12345', 'Ana': '67890'}
+
 
 #### e. Países y capitales
 
@@ -92,7 +143,17 @@ Crea un diccionario con al menos cinco pares de países y sus respectivas capita
 ```python
 paises = {'Argentina': 'Buenos Aires', 'Brasil': 'Brasilia', 'Chile': 'Santiago'}
 # Salida esperada: La capital de Chile es Santiago.
+
+pais = input("Ingresa el nombre de un país: ")
+
+if pais in paises:
+    print(f"La capital de {pais} es {paises[pais]}.")
+else:
+    print("El país no está registrado.")
 ```
+
+    La capital de Chile es Santiago.
+
 
 #### f. Suma de valores
 
@@ -102,7 +163,14 @@ Crea un diccionario con varios pares clave-valor donde las claves sean nombres d
 ```python
 precios = {'lápiz': 5, 'cuaderno': 20, 'mochila': 100}
 # Salida esperada: El costo total de todos los productos es 125.
+
+total = sum(precios.values())
+
+print(f"El costo total de todos los productos es {total}.")
 ```
+
+    El costo total de todos los productos es 125.
+
 
 #### g. Filtrando productos caros
 
@@ -112,7 +180,15 @@ Tienes un diccionario de productos con sus respectivos precios. Imprime solo aqu
 ```python
 productos = {'camisa': 30, 'zapatos': 70, 'pantalón': 55, 'gorra': 20}
 # Salida esperada: {'zapatos': 70, 'pantalón': 55}
+
+filtro = 50
+productos_caros = {producto: precio for producto, precio in productos.items() if precio > filtro}
+
+print(productos_caros)
 ```
+
+    {'zapatos': 70, 'pantalón': 55}
+
 
 #### h. Diccionario de traducciones
 
@@ -122,7 +198,17 @@ Crea un diccionario donde las claves sean palabras en español y los valores sea
 ```python
 traducciones = {'perro': 'dog', 'gato': 'cat', 'casa': 'house'}
 # Salida esperada: La traducción de 'gato' es 'cat'.
+
+palabra = input("Ingresa una palabra en español: ")
+
+if palabra in traducciones:
+    print(f"La traducción de '{palabra}' es '{traducciones[palabra]}'.")
+else:
+    print("La palabra no tiene traducción.")
 ```
+
+    La traducción de 'gato' es 'cat'.
+
 
 #### i. Identificación de elementos únicos
 
@@ -132,7 +218,20 @@ Tienes una lista de números y quieres saber cuántas veces aparece cada número
 ```python
 numeros = [1, 2, 2, 3, 3, 3, 4]
 # Salida esperada: {1: 1, 2: 2, 3: 3, 4: 1}
+
+conteo = {}
+
+for numero in numeros:
+    if numero in conteo:
+        conteo[numero] += 1
+    else:
+        conteo[numero] = 1
+
+print(conteo)
 ```
+
+    {1: 1, 2: 2, 3: 3, 4: 1}
+
 
 #### j. Actualización de precios con descuento
 
@@ -142,7 +241,17 @@ Crea un diccionario con productos y sus respectivos precios. Luego, reduce cada 
 ```python
 precios = {'libro': 200, 'revista': 50, 'marcador': 10}
 # Salida esperada: {'libro': 180.0, 'revista': 45.0, 'marcador': 9.0}
+
+descuento = 0.10
+
+for producto in precios:
+    precios[producto] -= precios[producto] * descuento
+
+print(precios)
 ```
+
+    {'libro': 180.0, 'revista': 45.0, 'marcador': 9.0}
+
 
 ---
 
@@ -174,7 +283,13 @@ Dada una lista de números, extrae una sublista con los primeros 5 elementos.
 ```python
 numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 # Salida esperada: [10, 20, 30, 40, 50]
+
+primeros_cinco = numeros[:5]
+print(primeros_cinco)
 ```
+
+    [10, 20, 30, 40, 50]
+
 
 #### b. Obtener últimos elementos
 
@@ -184,7 +299,12 @@ Dada una lista de palabras, obtén una sublista con las últimas 3 palabras.
 ```python
 palabras = ["python", "javascript", "java", "ruby", "perl", "swift"]
 # Salida esperada: ['ruby', 'perl', 'swift']
+
+print(palabras[-3:])
 ```
+
+    ['ruby', 'perl', 'swift']
+
 
 #### c. Sublista de elementos en posiciones pares
 
@@ -194,7 +314,12 @@ Dada una lista de letras, crea una nueva lista con los elementos en las posicion
 ```python
 letras = ["a", "b", "c", "d", "e", "f", "g", "h"]
 # Salida esperada: ['a', 'c', 'e', 'g']
+
+print(letras[::2])
 ```
+
+    ['a', 'c', 'e', 'g']
+
 
 #### d. Invertir lista
 
@@ -204,7 +329,12 @@ Dada una lista de números, utiliza slicing para invertir el orden de la lista.
 ```python
 numeros = [1, 2, 3, 4, 5]
 # Salida esperada: [5, 4, 3, 2, 1]
+
+print(numeros[::-1])
 ```
+
+    [5, 4, 3, 2, 1]
+
 
 #### e. Sublista desde el tercer elemento hasta el penúltimo
 
@@ -214,7 +344,13 @@ Dada una lista de nombres, crea una sublista que incluya desde el tercer element
 ```python
 nombres = ["Ana", "Luis", "María", "Carlos", "Sofía", "Miguel", "Elena"]
 # Salida esperada: ['María', 'Carlos', 'Sofía', 'Miguel']
+
+sublista = nombres[2:-1]
+print(sublista)
 ```
+
+    ['María', 'Carlos', 'Sofía', 'Miguel']
+
 
 ---
 
@@ -248,7 +384,13 @@ Dada una lista de números, genera una nueva lista que contenga el cuadrado de c
 ```python
 numeros = [1, 2, 3, 4, 5]
 # Salida esperada: [1, 4, 9, 16, 25]
+
+cuadrados = [n ** 2 for n in numeros]
+print(cuadrados)
 ```
+
+    [1, 4, 9, 16, 25]
+
 
 #### b. Filtrar números pares
 
@@ -258,7 +400,13 @@ Dada una lista de números, genera una nueva lista que contenga solo los número
 ```python
 numeros = [10, 15, 20, 25, 30, 35, 40]
 # Salida esperada: [10, 20, 30, 40]
+
+pares = [n for n in numeros if n % 2 == 0]
+print(pares)
 ```
+
+    [10, 20, 30, 40]
+
 
 #### c. Longitud de palabras
 
@@ -268,7 +416,13 @@ Dada una lista de palabras, genera una nueva lista que contenga la longitud de c
 ```python
 palabras = ["python", "comprensión", "de", "listas", "es", "útil"]
 # Salida esperada: [6, 11, 2, 6, 2, 4]
+
+longitudes = [len(palabra) for palabra in palabras]
+print(longitudes)
 ```
+
+    [6, 11, 2, 6, 2, 4]
+
 
 #### d. Convertir a minúsculas
 
@@ -278,7 +432,12 @@ Dada una lista de palabras con algunas en mayúsculas y otras en minúsculas, ge
 ```python
 palabras = ["PYTHON", "Listas", "Comprensión", "De", "Datos"]
 # Salida esperada: ['python', 'listas', 'comprensión', 'de', 'datos']
+
+print([palabra.lower() for palabra in palabras])
 ```
+
+    ['python', 'listas', 'comprensión', 'de', 'datos']
+
 
 #### e. Obtener los primeros caracteres
 
@@ -288,4 +447,9 @@ Dada una lista de palabras, genera una nueva lista que contenga solo el primer c
 ```python
 palabras = ["python", "listas", "comprensión", "de", "datos"]
 # Salida esperada: ['p', 'l', 'c', 'd', 'd']
+
+print([palabra[0] for palabra in palabras])
 ```
+
+    ['p', 'l', 'c', 'd', 'd']
+

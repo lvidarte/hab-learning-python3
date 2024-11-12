@@ -323,7 +323,18 @@ Dada una lista de números, calcula la suma de todos sus elementos e imprime el 
 ```python
 numeros = [2, 4, 6, 8, 10]
 # Debería imprimir: 30
+
+# sum(numeros)
+
+suma = 0
+for numero in numeros:
+    suma += numero
+
+print(suma)
 ```
+
+    30
+
 
 #### b. Encontrar el mayor elemento
 
@@ -333,7 +344,19 @@ Dada una lista de números, encuentra el mayor elemento y muéstralo.
 ```python
 numeros = [1, 5, 3, 9, 7]
 # Debería imprimir: 9
+
+# max(numeros)
+
+mayor = 0
+for numero in numeros:
+    if numero > mayor:
+        mayor = numero
+
+print(mayor)
 ```
+
+    9
+
 
 
 #### c. Invertir una lista
@@ -344,7 +367,18 @@ Dada una lista, invierte el orden de sus elementos e imprime la lista resultante
 ```python
 nombres = ["Ana", "Juan", "Luis", "Sofía"]
 # Debería imprimir: ["Sofía", "Luis", "Juan", "Ana"]
+
+# nombres[::-1]
+
+nombres_ordenados = []
+for i in range(3, -1, -1):
+    nombres_ordenados.append(nombres[i])
+
+print(nombres_ordenados)
 ```
+
+    ['Sofía', 'Luis', 'Juan', 'Ana']
+
 
 #### d. Contar ocurrencias de un elemento
 
@@ -355,7 +389,19 @@ Dada una lista de palabras, cuenta cuántas veces aparece una palabra específic
 palabras = ["hola", "mundo", "hola", "python", "hola"]
 palabra_a_contar = "hola"
 # Debería imprimir: 3
+
+# palabras.count('hola')
+
+contador = 0
+for palabra in palabras:
+    if palabra == palabra_a_contar:
+        contador += 1
+
+print(contador)
 ```
+
+    3
+
 
 
 #### e. Eliminar duplicados
@@ -366,7 +412,19 @@ Dada una lista con elementos repetidos, crea una nueva lista solo con los elemen
 ```python
 numeros = [1, 2, 2, 3, 4, 4, 5]
 # Debería imprimir: [1, 2, 3, 4, 5]
+
+# list(set(numeros))
+
+numeros_unicos = []
+for numero in numeros:
+    if numero not in numeros_unicos:
+        numeros_unicos.append(numero)
+
+print(numeros_unicos)
 ```
+
+    [1, 2, 3, 4, 5]
+
 
 
 #### f. Ordenar una lista de menor a mayor
@@ -377,7 +435,19 @@ Dada una lista de números desordenados, ordénala de menor a mayor e imprime la
 ```python
 numeros = [7, 3, 9, 1, 4]
 # Debería imprimir: [1, 3, 4, 7, 9]
+
+# sorted(numeros)
+
+for i in range(len(numeros)):
+    for j in range(0, len(numeros) - i - 1):
+       if numeros[j] > numeros[j + 1]:
+           numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]
+
+print(numeros)
 ```
+
+    [1, 3, 4, 7, 9]
+
 
 
 #### g. Filtrar números pares
@@ -388,7 +458,19 @@ Dada una lista de números, crea una nueva lista solo con los números pares e i
 ```python
 numeros = [1, 2, 3, 4, 5, 6, 7, 8]
 # Debería imprimir: [2, 4, 6, 8]
+
+# pares = [n for n in numeros if n % 2 == 0]
+
+pares = []
+for n in numeros:
+    if n % 2 == 0:
+        pares.append(n)
+
+print(pares)
 ```
+
+    [2, 4, 6, 8]
+
 
 
 #### h. Concatenar listas
@@ -400,7 +482,13 @@ Dadas dos listas, combina sus elementos en una sola lista e imprime el resultado
 lista1 = ["a", "b", "c"]
 lista2 = [1, 2, 3]
 # Debería imprimir: ["a", "b", "c", 1, 2, 3]
+
+lista = lista1 + lista2
+print(lista)
 ```
+
+    ['a', 'b', 'c', 1, 2, 3]
+
 
 
 ####  i. Eliminar el primer y último elemento
@@ -411,7 +499,14 @@ Dada una lista, elimine el primer y último elemento e imprime la lista resultan
 ```python
 nombres = ["Pedro", "Ana", "Juan", "Luis", "Sofía"]
 # Debería imprimir: ["Ana", "Juan", "Luis"]
+
+nombres.pop(0)
+nombres.pop()
+print(', '.join(nombres))
 ```
+
+    Ana, Juan, Luis
+
 
 ---
 
@@ -565,7 +660,13 @@ Dada una lista con elementos duplicados, utiliza un conjunto para crear una nuev
 ```python
 nombres = ["Ana", "Luis", "Juan", "Ana", "Sofía", "Luis"]
 # Salida esperada: ['Ana', 'Luis', 'Juan', 'Sofía']
+
+nombres_unicos = list(set(nombres))
+print(nombres_unicos)
 ```
+
+    ['Juan', 'Ana', 'Sofía', 'Luis']
+
 
 
 #### b. Encontrar elementos comunes entre dos listas
@@ -577,7 +678,13 @@ Dadas dos listas, encuentra los elementos que están presentes en ambas y devuel
 lista1 = [1, 2, 3, 4, 5]
 lista2 = [4, 5, 6, 7, 8]
 # Salida esperada: [4, 5]
+
+elementos_comunes = list(set(lista1) & set(lista2))
+print(elementos_comunes)
 ```
+
+    [4, 5]
+
 
 #### c. Unir elementos de dos listas sin duplicados
 
@@ -588,7 +695,13 @@ Crea una lista que contenga todos los elementos de dos listas diferentes, elimin
 lista1 = ['a', 'b', 'c']
 lista2 = ['c', 'd', 'e']
 # Salida esperada: ['a', 'b', 'c', 'd', 'e']
+
+union = list(set(lista1) | set(lista2))
+print(union)
 ```
+
+    ['d', 'b', 'c', 'e', 'a']
+
 
 #### d. Contar elementos únicos en una lista
 
@@ -598,7 +711,15 @@ Dada una lista, utiliza un conjunto para contar cuántos elementos únicos hay e
 ```python
 numeros = [1, 2, 2, 3, 4, 4, 5, 1]
 # Salida esperada: 5
+
+numeros_unicos = set(numeros)
+cantidad_unicos = len(numeros_unicos)
+
+print(f"Número de elementos únicos: {cantidad_unicos}")
 ```
+
+    Número de elementos únicos: 5
+
 
 #### e. Verificar si una lista es un subconjunto de otra
 
@@ -609,4 +730,14 @@ Dadas dos listas, verifica si todos los elementos de la primera lista están pre
 lista1 = [1, 2, 3]
 lista2 = [1, 2, 3, 4, 5]
 # Salida esperada: Lista1 es un subconjunto de Lista2.
+
+es_subconjunto = set(lista1).issubset(set(lista2))
+
+if es_subconjunto:
+    print("Lista1 es un subconjunto de Lista2.")
+else:
+    print("Lista1 no es un subconjunto de Lista2.")
 ```
+
+    Lista1 es un subconjunto de Lista2.
+

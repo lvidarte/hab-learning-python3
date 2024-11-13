@@ -489,23 +489,6 @@ Para usar `ColabTurtle`, primero debes instalar la librería.
 !pip3 install ColabTurtle
 ```
 
-    Collecting ColabTurtle
-      Downloading ColabTurtle-2.1.0.tar.gz (6.8 kB)
-      Installing build dependencies ... [?25ldone
-    [?25h  Getting requirements to build wheel ... [?25ldone
-    [?25h  Preparing metadata (pyproject.toml) ... [?25ldone
-    [?25hBuilding wheels for collected packages: ColabTurtle
-      Building wheel for ColabTurtle (pyproject.toml) ... [?25ldone
-    [?25h  Created wheel for ColabTurtle: filename=ColabTurtle-2.1.0-py3-none-any.whl size=7642 sha256=b33a917cd0c9a3521dbe4642c0f5418552935b25b25f761691093261f4e31a81
-      Stored in directory: /Users/leo/Library/Caches/pip/wheels/9f/af/64/ffd85f9858ed7d56b7293dcedbc9d461bf13c8cfc97e352bc8
-    Successfully built ColabTurtle
-    Installing collected packages: ColabTurtle
-    Successfully installed ColabTurtle-2.1.0
-    
-    [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.3[0m[39;49m -> [0m[32;49m24.3.1[0m
-    [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
-
-
 Luego hacer el siguiente import.
 
 
@@ -585,7 +568,7 @@ for _ in range(4):
 
 ```
 
-#### b. Escribe una función que dibuje un triángulo equilátero.
+#### b. Escribe una función que dibuje un triángulo equilátero de lado `n`.
 
 
 ```python

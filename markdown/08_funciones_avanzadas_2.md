@@ -482,12 +482,41 @@ El módulo turtle de Python está inspirado en el lenguaje de programación Logo
 
 #### e. ¿Cómo empezar?
 
-Para usar `ColabTurtle`, primero debes importar la librería y inicializar la tortuga. Después, puedes usar los comandos de `turtle` como de costumbre.
+Para usar `ColabTurtle`, primero debes instalar la librería.
+
+
+```python
+!pip3 install ColabTurtle
+```
+
+    Collecting ColabTurtle
+      Downloading ColabTurtle-2.1.0.tar.gz (6.8 kB)
+      Installing build dependencies ... [?25ldone
+    [?25h  Getting requirements to build wheel ... [?25ldone
+    [?25h  Preparing metadata (pyproject.toml) ... [?25ldone
+    [?25hBuilding wheels for collected packages: ColabTurtle
+      Building wheel for ColabTurtle (pyproject.toml) ... [?25ldone
+    [?25h  Created wheel for ColabTurtle: filename=ColabTurtle-2.1.0-py3-none-any.whl size=7642 sha256=b33a917cd0c9a3521dbe4642c0f5418552935b25b25f761691093261f4e31a81
+      Stored in directory: /Users/leo/Library/Caches/pip/wheels/9f/af/64/ffd85f9858ed7d56b7293dcedbc9d461bf13c8cfc97e352bc8
+    Successfully built ColabTurtle
+    Installing collected packages: ColabTurtle
+    Successfully installed ColabTurtle-2.1.0
+    
+    [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.3[0m[39;49m -> [0m[32;49m24.3.1[0m
+    [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+
+
+Luego hacer el siguiente import.
 
 
 ```python
 from ColabTurtle.Turtle import *
+```
 
+Finalmente inicializar la tortuga y comenzar a hacer dibujos.
+
+
+```python
 # Inicializa la tortuga
 initializeTurtle()
 
@@ -495,10 +524,19 @@ initializeTurtle()
 for _ in range(4):
     forward(100)
     left(90)
-
-# Mantiene la ventana abierta
-done()
 ```
+
+
+
+      <svg width="800" height="500">
+        <rect width="100%" height="100%" fill="black"/>
+        <line x1="400" y1="250" x2="400.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="150.0" x2="300.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="300.0" y1="150.0" x2="300.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="300.0" y1="250.0" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/>
+        <g visibility=visible transform="rotate(360,400.0,250.0) translate(382.0, 232.0)">
+<path style=" stroke:none;fill-rule:evenodd;fill:white;fill-opacity:1;" d="M 18.214844 0.632812 C 16.109375 1.800781 15.011719 4.074219 15.074219 7.132812 L 15.085938 7.652344 L 14.785156 7.496094 C 13.476562 6.824219 11.957031 6.671875 10.40625 7.066406 C 8.46875 7.550781 6.515625 9.15625 4.394531 11.992188 C 3.0625 13.777344 2.679688 14.636719 3.042969 15.027344 L 3.15625 15.152344 L 3.519531 15.152344 C 4.238281 15.152344 4.828125 14.886719 8.1875 13.039062 C 9.386719 12.378906 10.371094 11.839844 10.378906 11.839844 C 10.386719 11.839844 10.355469 11.929688 10.304688 12.035156 C 9.832031 13.09375 9.257812 14.820312 8.96875 16.078125 C 7.914062 20.652344 8.617188 24.53125 11.070312 27.660156 C 11.351562 28.015625 11.363281 27.914062 10.972656 28.382812 C 8.925781 30.84375 7.945312 33.28125 8.238281 35.1875 C 8.289062 35.527344 8.28125 35.523438 8.917969 35.523438 C 10.941406 35.523438 13.074219 34.207031 15.136719 31.6875 C 15.359375 31.417969 15.328125 31.425781 15.5625 31.574219 C 16.292969 32.042969 18.023438 32.964844 18.175781 32.964844 C 18.335938 32.964844 19.941406 32.210938 20.828125 31.71875 C 20.996094 31.625 21.136719 31.554688 21.136719 31.558594 C 21.203125 31.664062 21.898438 32.414062 22.222656 32.730469 C 23.835938 34.300781 25.5625 35.132812 27.582031 35.300781 C 27.90625 35.328125 27.9375 35.308594 28.007812 34.984375 C 28.382812 33.242188 27.625 30.925781 25.863281 28.425781 L 25.542969 27.96875 L 25.699219 27.785156 C 28.945312 23.960938 29.132812 18.699219 26.257812 11.96875 L 26.207031 11.84375 L 27.945312 12.703125 C 31.53125 14.476562 32.316406 14.800781 33.03125 14.800781 C 33.976562 14.800781 33.78125 13.9375 32.472656 12.292969 C 28.519531 7.355469 25.394531 5.925781 21.921875 7.472656 L 21.558594 7.636719 L 21.578125 7.542969 C 21.699219 6.992188 21.761719 5.742188 21.699219 5.164062 C 21.496094 3.296875 20.664062 1.964844 19.003906 0.855469 C 18.480469 0.503906 18.457031 0.5 18.214844 0.632812"/>
+</g>
+      </svg>
+
+
 
 #### f. Funciones básicas
 
@@ -513,7 +551,7 @@ done()
 | `pendown()`       | Baja el lápiz, la tortuga comienza a dibujar mientras se mueve.             | `pendown()`                                 |
 | `color(pen_color, fill_color)` | Cambia el color del lápiz (trazo) y el color de relleno.              | `color("blue")`, `color("blue", "yellow")`  |
 | `bgcolor(color)`  | Cambia el color de fondo del lienzo.                                         | `bgcolor("lightgray")`                      |
-| `speed(speed_value)` | Cambia la velocidad de la tortuga, de 0 (rápido) a 10 (lento).              | `speed(5)`                                  |
+| `speed(speed_value)` | Cambia la velocidad de la tortuga, de 0 (lento) a 10 (rápido).              | `speed(5)`                                  |
 | `reset()`         | Resetea el estado de la tortuga, borrando todo y restableciendo la posición. | `reset()`                                   |
 | `clear()`         | Borra lo que ha dibujado la tortuga pero mantiene su posición.              | `clear()`                                   |
 | `done()`          | Finaliza el dibujo y mantiene la ventana abierta para ver el resultado.     | `done()`                                    |
@@ -559,15 +597,43 @@ def cuadrado(tamaño):
 cuadrado(100)
 ```
 
+
+
+      <svg width="800" height="500">
+        <rect width="100%" height="100%" fill="black"/>
+        <line x1="400" y1="250" x2="400.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="150.0" x2="500.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="500.0" y1="150.0" x2="500.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="500.0" y1="250.0" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/>
+        <g visibility=visible transform="rotate(360,400.0,250.0) translate(382.0, 232.0)">
+<path style=" stroke:none;fill-rule:evenodd;fill:white;fill-opacity:1;" d="M 18.214844 0.632812 C 16.109375 1.800781 15.011719 4.074219 15.074219 7.132812 L 15.085938 7.652344 L 14.785156 7.496094 C 13.476562 6.824219 11.957031 6.671875 10.40625 7.066406 C 8.46875 7.550781 6.515625 9.15625 4.394531 11.992188 C 3.0625 13.777344 2.679688 14.636719 3.042969 15.027344 L 3.15625 15.152344 L 3.519531 15.152344 C 4.238281 15.152344 4.828125 14.886719 8.1875 13.039062 C 9.386719 12.378906 10.371094 11.839844 10.378906 11.839844 C 10.386719 11.839844 10.355469 11.929688 10.304688 12.035156 C 9.832031 13.09375 9.257812 14.820312 8.96875 16.078125 C 7.914062 20.652344 8.617188 24.53125 11.070312 27.660156 C 11.351562 28.015625 11.363281 27.914062 10.972656 28.382812 C 8.925781 30.84375 7.945312 33.28125 8.238281 35.1875 C 8.289062 35.527344 8.28125 35.523438 8.917969 35.523438 C 10.941406 35.523438 13.074219 34.207031 15.136719 31.6875 C 15.359375 31.417969 15.328125 31.425781 15.5625 31.574219 C 16.292969 32.042969 18.023438 32.964844 18.175781 32.964844 C 18.335938 32.964844 19.941406 32.210938 20.828125 31.71875 C 20.996094 31.625 21.136719 31.554688 21.136719 31.558594 C 21.203125 31.664062 21.898438 32.414062 22.222656 32.730469 C 23.835938 34.300781 25.5625 35.132812 27.582031 35.300781 C 27.90625 35.328125 27.9375 35.308594 28.007812 34.984375 C 28.382812 33.242188 27.625 30.925781 25.863281 28.425781 L 25.542969 27.96875 L 25.699219 27.785156 C 28.945312 23.960938 29.132812 18.699219 26.257812 11.96875 L 26.207031 11.84375 L 27.945312 12.703125 C 31.53125 14.476562 32.316406 14.800781 33.03125 14.800781 C 33.976562 14.800781 33.78125 13.9375 32.472656 12.292969 C 28.519531 7.355469 25.394531 5.925781 21.921875 7.472656 L 21.558594 7.636719 L 21.578125 7.542969 C 21.699219 6.992188 21.761719 5.742188 21.699219 5.164062 C 21.496094 3.296875 20.664062 1.964844 19.003906 0.855469 C 18.480469 0.503906 18.457031 0.5 18.214844 0.632812"/>
+</g>
+      </svg>
+
+
+
 #### b. Crea una función que dibuje un triángulo equilátero.
 
 
 ```python
+initializeTurtle()
+
 def triangulo(tamaño):
     for _ in range(3):
         forward(tamaño)
         right(120)
+
+triangulo(150)
 ```
+
+
+
+      <svg width="800" height="500">
+        <rect width="100%" height="100%" fill="black"/>
+        <line x1="400" y1="250" x2="400.0" y2="100.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="100.0" x2="529.904" y2="175.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="529.904" y1="175.0" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/>
+        <g visibility=visible transform="rotate(360,400.0,250.0) translate(382.0, 232.0)">
+<path style=" stroke:none;fill-rule:evenodd;fill:white;fill-opacity:1;" d="M 18.214844 0.632812 C 16.109375 1.800781 15.011719 4.074219 15.074219 7.132812 L 15.085938 7.652344 L 14.785156 7.496094 C 13.476562 6.824219 11.957031 6.671875 10.40625 7.066406 C 8.46875 7.550781 6.515625 9.15625 4.394531 11.992188 C 3.0625 13.777344 2.679688 14.636719 3.042969 15.027344 L 3.15625 15.152344 L 3.519531 15.152344 C 4.238281 15.152344 4.828125 14.886719 8.1875 13.039062 C 9.386719 12.378906 10.371094 11.839844 10.378906 11.839844 C 10.386719 11.839844 10.355469 11.929688 10.304688 12.035156 C 9.832031 13.09375 9.257812 14.820312 8.96875 16.078125 C 7.914062 20.652344 8.617188 24.53125 11.070312 27.660156 C 11.351562 28.015625 11.363281 27.914062 10.972656 28.382812 C 8.925781 30.84375 7.945312 33.28125 8.238281 35.1875 C 8.289062 35.527344 8.28125 35.523438 8.917969 35.523438 C 10.941406 35.523438 13.074219 34.207031 15.136719 31.6875 C 15.359375 31.417969 15.328125 31.425781 15.5625 31.574219 C 16.292969 32.042969 18.023438 32.964844 18.175781 32.964844 C 18.335938 32.964844 19.941406 32.210938 20.828125 31.71875 C 20.996094 31.625 21.136719 31.554688 21.136719 31.558594 C 21.203125 31.664062 21.898438 32.414062 22.222656 32.730469 C 23.835938 34.300781 25.5625 35.132812 27.582031 35.300781 C 27.90625 35.328125 27.9375 35.308594 28.007812 34.984375 C 28.382812 33.242188 27.625 30.925781 25.863281 28.425781 L 25.542969 27.96875 L 25.699219 27.785156 C 28.945312 23.960938 29.132812 18.699219 26.257812 11.96875 L 26.207031 11.84375 L 27.945312 12.703125 C 31.53125 14.476562 32.316406 14.800781 33.03125 14.800781 C 33.976562 14.800781 33.78125 13.9375 32.472656 12.292969 C 28.519531 7.355469 25.394531 5.925781 21.921875 7.472656 L 21.558594 7.636719 L 21.578125 7.542969 C 21.699219 6.992188 21.761719 5.742188 21.699219 5.164062 C 21.496094 3.296875 20.664062 1.964844 19.003906 0.855469 C 18.480469 0.503906 18.457031 0.5 18.214844 0.632812"/>
+</g>
+      </svg>
+
+
 
 #### c. Crea una función que dibuje un polígono de cualquier cantidad de lados, dado el número de lados y el tamaño del lado.
 

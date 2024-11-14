@@ -509,18 +509,6 @@ for _ in range(4):
     left(90)
 ```
 
-
-
-      <svg width="800" height="500">
-        <rect width="100%" height="100%" fill="black"/>
-        <line x1="400" y1="250" x2="400.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="150.0" x2="300.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="300.0" y1="150.0" x2="300.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="300.0" y1="250.0" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/>
-        <g visibility=visible transform="rotate(360,400.0,250.0) translate(382.0, 232.0)">
-<path style=" stroke:none;fill-rule:evenodd;fill:white;fill-opacity:1;" d="M 18.214844 0.632812 C 16.109375 1.800781 15.011719 4.074219 15.074219 7.132812 L 15.085938 7.652344 L 14.785156 7.496094 C 13.476562 6.824219 11.957031 6.671875 10.40625 7.066406 C 8.46875 7.550781 6.515625 9.15625 4.394531 11.992188 C 3.0625 13.777344 2.679688 14.636719 3.042969 15.027344 L 3.15625 15.152344 L 3.519531 15.152344 C 4.238281 15.152344 4.828125 14.886719 8.1875 13.039062 C 9.386719 12.378906 10.371094 11.839844 10.378906 11.839844 C 10.386719 11.839844 10.355469 11.929688 10.304688 12.035156 C 9.832031 13.09375 9.257812 14.820312 8.96875 16.078125 C 7.914062 20.652344 8.617188 24.53125 11.070312 27.660156 C 11.351562 28.015625 11.363281 27.914062 10.972656 28.382812 C 8.925781 30.84375 7.945312 33.28125 8.238281 35.1875 C 8.289062 35.527344 8.28125 35.523438 8.917969 35.523438 C 10.941406 35.523438 13.074219 34.207031 15.136719 31.6875 C 15.359375 31.417969 15.328125 31.425781 15.5625 31.574219 C 16.292969 32.042969 18.023438 32.964844 18.175781 32.964844 C 18.335938 32.964844 19.941406 32.210938 20.828125 31.71875 C 20.996094 31.625 21.136719 31.554688 21.136719 31.558594 C 21.203125 31.664062 21.898438 32.414062 22.222656 32.730469 C 23.835938 34.300781 25.5625 35.132812 27.582031 35.300781 C 27.90625 35.328125 27.9375 35.308594 28.007812 34.984375 C 28.382812 33.242188 27.625 30.925781 25.863281 28.425781 L 25.542969 27.96875 L 25.699219 27.785156 C 28.945312 23.960938 29.132812 18.699219 26.257812 11.96875 L 26.207031 11.84375 L 27.945312 12.703125 C 31.53125 14.476562 32.316406 14.800781 33.03125 14.800781 C 33.976562 14.800781 33.78125 13.9375 32.472656 12.292969 C 28.519531 7.355469 25.394531 5.925781 21.921875 7.472656 L 21.558594 7.636719 L 21.578125 7.542969 C 21.699219 6.992188 21.761719 5.742188 21.699219 5.164062 C 21.496094 3.296875 20.664062 1.964844 19.003906 0.855469 C 18.480469 0.503906 18.457031 0.5 18.214844 0.632812"/>
-</g>
-      </svg>
-
-
-
 #### f. Funciones básicas
 
 | Función          | Descripción                                                                 | Uso Ejemplo                                  |
@@ -565,69 +553,128 @@ for _ in range(4):
 
 
 ```python
+initializeTurtle()
+speed(10)
 
+def cuadrado(lado=100):
+  for _ in range(4):
+    forward(lado)
+    right(90)
+
+for i in range(10, 201, 10):
+  cuadrado(lado=i)
 ```
 
 #### b. Escribe una función que dibuje un triángulo equilátero de lado `n`.
 
 
 ```python
+initializeTurtle()
+speed(10)
 
+def triangulo(lado=100):
+  for _ in range(3):
+    forward(lado)
+    right(120)
+
+for _ in range(9):
+  triangulo()
+  right(360/9)
 ```
 
-#### c. Escribe una función que dibuje la siguiente figura.
+#### c. Escribe una función que dibuje 5 cuadrados girando 360/5 cada vez.
 
 
 ```python
+initializeTurtle()
+speed(10)
 
+def figura():
+  for _ in range(5):
+    cuadrado(100)
+    right(360/5)
+
+figura()
 ```
-
-
-
-      <svg width="800" height="500">
-        <rect width="100%" height="100%" fill="black"/>
-        <line x1="400" y1="250" x2="400.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="150.0" x2="500.0" y2="150.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="500.0" y1="150.0" x2="500.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="500.0" y1="250.0" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="250.0" x2="495.106" y2="219.098" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="495.106" y1="219.098" x2="526.008" y2="314.204" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="526.008" y1="314.204" x2="430.902" y2="345.106" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="430.902" y1="345.106" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="250.0" x2="458.779" y2="330.902" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="458.779" y1="330.902" x2="377.877" y2="389.681" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="377.877" y1="389.681" x2="319.098" y2="308.779" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="319.098" y1="308.779" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="250.0" x2="341.221" y2="330.902" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="341.221" y1="330.902" x2="260.319" y2="272.123" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="260.319" y1="272.123" x2="319.098" y2="191.221" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="319.098" y1="191.221" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="400.0" y1="250.0" x2="304.894" y2="219.098" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="304.894" y1="219.098" x2="335.796" y2="123.992" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="335.796" y1="123.992" x2="430.902" y2="154.894" stroke-linecap="round" style="stroke:white;stroke-width:4"/><line x1="430.902" y1="154.894" x2="400.0" y2="250.0" stroke-linecap="round" style="stroke:white;stroke-width:4"/>
-        <g visibility=visible transform="rotate(360,400.0,250.0) translate(382.0, 232.0)">
-<path style=" stroke:none;fill-rule:evenodd;fill:white;fill-opacity:1;" d="M 18.214844 0.632812 C 16.109375 1.800781 15.011719 4.074219 15.074219 7.132812 L 15.085938 7.652344 L 14.785156 7.496094 C 13.476562 6.824219 11.957031 6.671875 10.40625 7.066406 C 8.46875 7.550781 6.515625 9.15625 4.394531 11.992188 C 3.0625 13.777344 2.679688 14.636719 3.042969 15.027344 L 3.15625 15.152344 L 3.519531 15.152344 C 4.238281 15.152344 4.828125 14.886719 8.1875 13.039062 C 9.386719 12.378906 10.371094 11.839844 10.378906 11.839844 C 10.386719 11.839844 10.355469 11.929688 10.304688 12.035156 C 9.832031 13.09375 9.257812 14.820312 8.96875 16.078125 C 7.914062 20.652344 8.617188 24.53125 11.070312 27.660156 C 11.351562 28.015625 11.363281 27.914062 10.972656 28.382812 C 8.925781 30.84375 7.945312 33.28125 8.238281 35.1875 C 8.289062 35.527344 8.28125 35.523438 8.917969 35.523438 C 10.941406 35.523438 13.074219 34.207031 15.136719 31.6875 C 15.359375 31.417969 15.328125 31.425781 15.5625 31.574219 C 16.292969 32.042969 18.023438 32.964844 18.175781 32.964844 C 18.335938 32.964844 19.941406 32.210938 20.828125 31.71875 C 20.996094 31.625 21.136719 31.554688 21.136719 31.558594 C 21.203125 31.664062 21.898438 32.414062 22.222656 32.730469 C 23.835938 34.300781 25.5625 35.132812 27.582031 35.300781 C 27.90625 35.328125 27.9375 35.308594 28.007812 34.984375 C 28.382812 33.242188 27.625 30.925781 25.863281 28.425781 L 25.542969 27.96875 L 25.699219 27.785156 C 28.945312 23.960938 29.132812 18.699219 26.257812 11.96875 L 26.207031 11.84375 L 27.945312 12.703125 C 31.53125 14.476562 32.316406 14.800781 33.03125 14.800781 C 33.976562 14.800781 33.78125 13.9375 32.472656 12.292969 C 28.519531 7.355469 25.394531 5.925781 21.921875 7.472656 L 21.558594 7.636719 L 21.578125 7.542969 C 21.699219 6.992188 21.761719 5.742188 21.699219 5.164062 C 21.496094 3.296875 20.664062 1.964844 19.003906 0.855469 C 18.480469 0.503906 18.457031 0.5 18.214844 0.632812"/>
-</g>
-      </svg>
-
-
 
 #### d. Escribe una función que dibuje un polígono de cualquier cantidad de lados, dado el número de lados y el tamaño del lado.
 
 
 ```python
+initializeTurtle()
+speed(10)
 
+def poligono(lados, largo=100):
+  for _ in range(lados):
+    forward(largo)
+    right(360/lados)
+
+colores = ['red', 'green', 'blue']
+
+for i in range(3, 21):
+  color(colores[i % 3])
+  poligono(i, 50)
+  right(360/10)
 ```
 
 #### e. Dibuja un círculo.
 
 
 ```python
+initializeTurtle()
+speed(11)
 
+for i in range(5, 51, 5):
+  poligono(50, i)
 ```
 
 #### f. Escribe una función que utilizando la función anterior, dibuje 8 polígonos, girando 45 grados a la derecha por cada polígono.
 
 
 ```python
+initializeTurtle()
+speed(13)
 
+def figura():
+  for _ in range(8):
+    poligono(9, 60)
+    right(360/8)
+
+figura()
 ```
 
 #### g. Escribe una función `mandala` que sea capaz de dibujar n polígonos, usando colores de la siguiente lista.
 
 
 ```python
-initializeTurtle()
+import random
+import time
 
-colores = ["red", "blue", "green", "yellow", "purple"]
+initializeTurtle()
+speed(11)
+
+#colores = ["red", "blue", "green", "yellow", "purple"]
+
+def rgb():
+  r = random.randint(0, 255)
+  g = random.randint(0, 255)
+  b = random.randint(0, 255)
+  return r, g, b
 
 def mandala(poligonos, lados, largo):
-    for i in range(poligonos):
-        color(colores[i % 5])
-        poligono(lados, largo)
-        right(360/poligonos)
+  bgcolor(rgb())
+  for i in range(poligonos):
+    color(rgb())
+    poligono(lados, largo)
+    right(360/poligonos)
+
+while True:
+  clear()
+  poligonos = random.randint(3, 25)
+  lados = random.randint(3, 10)
+  largo = random.randint(50, 100)
+  mandala(poligonos, lados, largo)
+  time.sleep(1)
 ```
 
 #### h. Escribe una función que dibuje una estrella de 5 puntas.
@@ -635,44 +682,94 @@ def mandala(poligonos, lados, largo):
 
 ```python
 initializeTurtle()
+speed(10)
 
 def estrella(largo):
-    for _ in range(5):
-        forward(largo)
-        right(144)
+  for _ in range(5):
+    forward(largo)
+    right(144)
+
+estrella(150)
 ```
 
 #### i. Escribe una función `mover_al_azar` que, sin dibujar, mueva la tortuga a un lugar aleatorio del lienzo.
 
 
 ```python
+initializeTurtle()
+speed(10)
 
+def mover_al_azar():
+  penup()
+  x = random.randint(0, 600)
+  y = random.randint(0, 300)
+  goto(x, y)
+  pendown()
+
+for _ in range(10):
+  mover_al_azar()
+  time.sleep(1)
 ```
 
 #### j. Escribe una función que dibuje n polígonos al azar, usando un color al azar para cada polígono y moviendo aleatoriamente la tortuga entre cada polígono.
 
 
 ```python
+initializeTurtle()
+speed(12)
 
+def poligonos(n):
+  for _ in range(n):
+    color(rgb())
+    poligono(random.randint(3, 10), random.randint(50, 100))
+    mover_al_azar()
+    time.sleep(1)
+
+poligonos(10)
 ```
 
 #### k. Escribe una función que dibuje una espiral cuadrada.
 
 
 ```python
+initializeTurtle()
+speed(12)
 
+def espiral_cuadrada(lados=20):
+  for lado in range(10, lados * 10 + 1, 10):
+    forward(lado)
+    right(90)
+
+espiral_cuadrada(40)
 ```
 
 #### l. Escribe una función que dibuje cualquier tipo de espiral, ya sea triangular, cuadrada, hexagonal, etc.
 
 
 ```python
+initializeTurtle()
+speed(12)
 
+def espiral(lados=20, poligono=3):
+  for lado in range(10, lados * 10 + 1, 10):
+    forward(lado)
+    right(360/poligono)
+
+espiral(20, 10)
 ```
 
 #### m. Escribe una función que dibuje un cielo estrellado.
 
 
 ```python
+initializeTurtle()
+speed(12)
 
+def cielo_estrellado(n):
+  for _ in range(n):
+    color(rgb())
+    estrella(random.randint(3, 10))
+    mover_al_azar()
+
+cielo_estrellado(40)
 ```

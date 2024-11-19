@@ -42,7 +42,21 @@ except ZeroDivisionError:
 
 #### c. Ejercicio práctico
 
-Escribe un programa que solicite al usuario ingresar un número. Maneja la excepción `ValueError` y `ZeroDivisionError` al intentar dividir 10 entre el número ingresado.
+Se tiene una lista con tres elementos: `[1, 2, 3]`. Solicita al usuario que ingrese un número entero. El programa debe intentar realizar dos operaciones con el número proporcionado:
+
+1. Convertir el valor ingresado en un número entero.
+2. Acceder a un índice de la lista usando el número proporcionado.
+
+**Requisitos**:
+
+- Si el usuario ingresa un valor que no pueda ser convertido a un número entero (por ejemplo, una cadena de texto), el programa debe capturar el error y mostrar el mensaje:  
+  `"Error: Debes introducir un número entero."`
+
+- Si el número ingresado es un índice fuera del rango de la lista (por ejemplo, si el número es 5), el programa debe capturar el error y mostrar el mensaje:  
+  `"Error: El índice proporcionado está fuera del rango de la lista."`
+
+- Si ocurre cualquier otro error inesperado, el programa debe capturar el error y mostrar un mensaje genérico indicando que ocurrió un error, sin especificar detalles del tipo de error. El mensaje debe ser:  
+  `"Se ha producido un error inesperado: {mensaje del error}"`
 
 
 ```python
@@ -53,18 +67,49 @@ Escribe un programa que solicite al usuario ingresar un número. Maneja la excep
 
 El bloque `finally` se ejecuta siempre, ya sea que se haya producido una excepción o no. Es útil para liberar recursos o realizar limpiezas.
 
-#### a. Uso de finally para cerrar un archivo
+#### a. Ejemplo de función que procesa datos
 
 
 ```python
-try:
-    archivo = open('archivo.txt', 'r')
-    contenido = archivo.read()
-except FileNotFoundError:
-    print("¡Error! El archivo no se encontró.")
-finally:
-    archivo.close()  # Asegura que el archivo se cierre
+def procesar_datos(datos):
+    try:
+        # Intentar obtener el primer valor de la lista
+        primero = datos[0]
+        print(f"Procesando el primer dato: {primero}")
+        
+        # Intentar hacer una operación que podría fallar (por ejemplo, una conversión)
+        resultado = int(primero)
+        print(f"El primer dato convertido a entero es: {resultado}")
+        
+    except IndexError:
+        print("Error: La lista está vacía.")
+    except ValueError:
+        print("Error: El primer dato no es un número válido.")
+    finally:
+        print("Proceso de procesamiento de datos finalizado, independientemente del resultado.")
+
 ```
+
+
+```python
+datos = ["10", "20", "30"]
+procesar_datos(datos)
+```
+
+    Procesando el primer dato: 10
+    El primer dato convertido a entero es: 10
+    Proceso de procesamiento de datos finalizado, independientemente del resultado.
+
+
+
+```python
+datos_vacios = []
+procesar_datos(datos_vacios)
+```
+
+    Error: La lista está vacía.
+    Proceso de procesamiento de datos finalizado, independientemente del resultado.
+
 
 #### b. Ejercicio práctico
 

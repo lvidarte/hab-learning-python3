@@ -710,8 +710,32 @@ Escribe una función `dividir(a, b)` que maneje divisiones por cero lanzando una
 
 
 ```python
+def dividir(a: float, b: float) -> float:
+    """
+    Calcula la división entre a y b.
 
+    Parameters:
+        a (float): El numerador.
+        b (float): El denominador.
+
+    Returns:
+        float: El resultado de la división.
+
+    Raises:
+        ZeroDivisionError: Si el denominador es cero.
+    """
+    if b == 0:
+        raise ZeroDivisionError("El denominador no puede ser cero.")
+    return a / b
+
+try:
+    print(dividir(10, 0))
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
 ```
+
+    Error: El denominador no puede ser cero.
+
 
 #### b. Validación de edad
 
@@ -719,8 +743,19 @@ Crea una función `verificar_edad(edad)` que lance una excepción si la edad es 
 
 
 ```python
+def verificar_edad(edad):
+    if edad < 0:
+        raise ValueError("La edad no puede ser negativa.")
+    return edad
 
+try:
+    verificar_edad(-5)
+except ValueError as e:
+    print(e)
 ```
+
+    La edad no puede ser negativa.
+
 
 #### c. Comprobación de lista vacía
 
@@ -728,8 +763,19 @@ Escribe una función `obtener_primero(lista)` que devuelva el primer elemento de
 
 
 ```python
+def obtener_primero(lista):
+    if len(lista) == 0:
+        raise ValueError("La lista está vacía.")
+    return lista[0]
 
+try:
+    print(obtener_primero([]))
+except ValueError as e:
+    print(e)
 ```
+
+    La lista está vacía.
+
 
 #### d. Conversión segura a entero
 
@@ -737,8 +783,22 @@ Crea una función `convertir_a_entero(valor)` que maneje excepciones al converti
 
 
 ```python
+def convertir_a_entero(valor):
+    try:
+        return int(valor)
+    except ValueError:
+        raise Exception(f"No se puede convertir '{valor}' a entero.")
 
+try:
+    num: int = convertir_a_entero('hola')
+except Exception as e:
+    print(e)
+else:
+    print(num)
 ```
+
+    No se puede convertir 'hola' a entero.
+
 
 #### e. Validación de rango numérico
 
@@ -746,8 +806,24 @@ Escribe una función `verificar_rango(n, min, max)` que lance una excepción si 
 
 
 ```python
+def verificar_rango(n, min, max):
+    if n < min or n > max:
+        raise ZeroDivisionError(f"El número debe estar entre {min} y {max}.")
+    return n
 
+try:
+    verificar_rango(0, 1, 10)
+except Exception as e:
+    print(e)
+else:
+    print("No hubo excepciones")
+finally:
+    print("Terminó el bloque try")
 ```
+
+    El número debe estar entre 1 y 10.
+    Terminó el bloque try
+
 
 #### f. Búsqueda en diccionario
 
@@ -755,8 +831,23 @@ Crea una función `buscar_clave(diccionario, clave)` que maneje la ausencia de u
 
 
 ```python
+def buscar_clave(diccionario, clave):
+    if clave not in diccionario:
+        raise KeyError(f"La clave '{clave}' no existe en el diccionario.")
+    return diccionario[clave]
 
+diccionario = {'a': 1, 'b': 2}
+
+try:
+    dato = buscar_clave(diccionario, 'c')
+except KeyError as e:
+    print(e)
+else:
+    print(dato)
 ```
+
+    "La clave 'c' no existe en el diccionario."
+
 
 #### g. Operación matemática personalizada
 
@@ -764,8 +855,23 @@ Escribe una función `calcular_raiz_cuadrada(n)` que maneje valores negativos la
 
 
 ```python
+import math
 
+def calcular_raiz_cuadrada(n):
+    if n < 0:
+        raise ValueError("El número no puede ser negativo.")
+    return math.sqrt(n)
+
+try:
+    resultado = calcular_raiz_cuadrada(-9)
+except ValueError as e:
+    print(e)
+else:
+    print(resultado)
 ```
+
+    El número no puede ser negativo.
+
 
 
 #### h. Validación de cadenas
@@ -774,8 +880,19 @@ Crea una función `validar_cadena(cadena)` que lance una excepción si la cadena
 
 
 ```python
+def validar_cadena(cadena):
+    if not cadena:
+        raise ValueError("La cadena no puede estar vacía.")
+    return f"La cadena es válida: {cadena}"
 
+try:
+    print(validar_cadena(""))
+except ValueError as e:
+    print(f"Error: {e}")
 ```
+
+    Error: La cadena no puede estar vacía.
+
 
 
 #### i. Operación en archivo
@@ -784,8 +901,29 @@ Escribe una función `leer_archivo(nombre_archivo)` que maneje errores al intent
 
 
 ```python
+def leer_archivo(filepath):
+    archivo = None
+    try:
+        archivo = open(filepath, 'r')
+        contenido = archivo.read()
+        return contenido
+    except FileNotFoundError:
+        raise FileNotFoundError(f"El archivo '{filepath}' no existe.")
+    finally:
+        if archivo is not None:
+            print("Cerrando archivo")
+            archivo.close()
 
+try:
+    contenido = leer_archivo('archivo_no_existe.txt')
+except FileNotFoundError as e:
+    print(e)
+else:
+    print(contenido)
 ```
+
+    El archivo 'archivo_no_existe.txt' no existe.
+
 
 
 #### j. Validación de divisor múltiple
@@ -794,7 +932,14 @@ Crea una función `verificar_multiplo(n, divisor)` que lance una excepción si e
 
 
 ```python
+def verificar_multiplo(n, divisor):
+    if n % divisor != 0:
+        raise ValueError(f"{n} no es múltiplo de {divisor}.")
 
+try:
+    verificar_multiplo(9, 3)
+except ValueError as e:
+    print(e)
 ```
 
 #### k. Excepción personalizada para rango de edades
@@ -803,8 +948,27 @@ Crea una excepción personalizada llamada `EdadInvalidaError`. Escribe una funci
 
 
 ```python
+class EdadInvalidaError(Exception):
+    pass
 
+def verificar_edad(edad):
+    if edad < 0 or edad > 120:
+        raise EdadInvalidaError(f"La edad {edad} es inválida.")
+    return edad
+
+try:
+    verificar_edad(-5)
+except EdadInvalidaError as e:
+    print(e)
+else:
+    print("No hubo excepciones")
+finally:
+    print("Terminó el bloque try")
 ```
+
+    La edad -5 es inválida.
+    Terminó el bloque try
+
 
 #### l. Excepción personalizada para formato de nombre
 
@@ -812,8 +976,26 @@ Define una excepción personalizada llamada `FormatoNombreError`. Crea una funci
 
 
 ```python
+class FormatoNombreError(Exception):
+    pass
 
+def verificar_nombre(nombre):
+    if not nombre[0].isupper() or any(char.isdigit() for char in nombre):
+        raise FormatoNombreError(f"El nombre '{nombre}' no tiene el formato correcto.")
+
+try:
+    verificar_nombre('Juan_')
+except FormatoNombreError as e:
+    print(e)
+else:
+    print("No hubo excepciones")
+finally:
+    print("Terminó el bloque try")
 ```
+
+    No hubo excepciones
+    Terminó el bloque try
+
 
 #### m. Validación de entrada de número
 
@@ -825,5 +1007,25 @@ Utiliza múltiples bloques `except` para manejar errores como `ValueError` (si e
 
 
 ```python
+class NumeroInvalidoError(Exception):
+    pass
 
+def validar_numero(numero):
+    if not isinstance(numero, (int, float)):
+        raise ValueError("El número debe ser un número válido.")
+
+try:
+    validar_numero(101)
+except ValueError as e:
+    print(e)
+except NumeroInvalidoError as e:
+    print(e)
+else:
+    print("No hubo excepciones")
+finally:
+    print("Terminó el bloque try")
 ```
+
+    No hubo excepciones
+    Terminó el bloque try
+

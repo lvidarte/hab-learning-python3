@@ -314,7 +314,7 @@ except (ValueError, ZeroDivisionError) as e:
     print(type(e))
 ```
 
-    Error: invalid literal for int() with base 10: 'o'
+    Error: invalid literal for int() with base 10: 'uno'
     <class 'ValueError'>
 
 
@@ -335,7 +335,7 @@ except ZeroDivisionError:
     print("Error: No se puede dividir por cero.")
 ```
 
-    Resultado: 10.0
+    Error: No se puede dividir por cero.
 
 
 Aquí, cada excepción tiene su propio bloque `except`, permitiendo respuestas personalizadas para cada error.
@@ -355,6 +355,10 @@ else:
     print("El cálculo se realizó con éxito.")
 ```
 
+    Resultado: 5.0
+    El cálculo se realizó con éxito.
+
+
 Este ejemplo muestra cómo capturar múltiples excepciones en un bloque único y cómo usar `else` para manejar el caso en el que no ocurrieron errores.
 
 #### d. Excepciones específicas con un mensaje común y captura general
@@ -365,7 +369,8 @@ try:
     # Código que puede generar errores
     x = int(input("Ingresa un número: "))
     y = 10 / x
-    print(f"Resultado: {y}")
+    mensaje = 'resultado:' + y
+    print(mensaje)
 except ValueError:
     print("Error: Ingresaste un valor no numérico.")
 except ZeroDivisionError:
@@ -375,7 +380,7 @@ except Exception as e:
     print(f"Ocurrió un error inesperado: {e}")
 ```
 
-    Error: Ingresaste un valor no numérico.
+    Ocurrió un error inesperado: can only concatenate str (not "float") to str
 
 
 Este enfoque es útil cuando quieres capturar errores específicos primero y luego manejar cualquier otra excepción genérica con un bloque general `except Exception`.
@@ -705,19 +710,8 @@ Escribe una función `dividir(a, b)` que maneje divisiones por cero lanzando una
 
 
 ```python
-def dividir(a, b):
-    if b == 0:
-        raise ZeroDivisionError("El denominador no puede ser cero.")
-    return a / b
 
-try:
-    print(dividir(10, 0))
-except ZeroDivisionError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: El denominador no puede ser cero.
-
 
 #### b. Validación de edad
 
@@ -725,19 +719,8 @@ Crea una función `verificar_edad(edad)` que lance una excepción si la edad es 
 
 
 ```python
-def verificar_edad(edad):
-    if edad < 0:
-        raise ValueError("La edad no puede ser negativa.")
-    return f"La edad es válida: {edad}"
 
-try:
-    print(verificar_edad(-5))
-except ValueError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: La edad no puede ser negativa.
-
 
 #### c. Comprobación de lista vacía
 
@@ -745,19 +728,8 @@ Escribe una función `obtener_primero(lista)` que devuelva el primer elemento de
 
 
 ```python
-def obtener_primero(lista):
-    if not lista:
-        raise IndexError("La lista está vacía.")
-    return lista[0]
 
-try:
-    print(obtener_primero([]))
-except IndexError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: La lista está vacía.
-
 
 #### d. Conversión segura a entero
 
@@ -765,20 +737,8 @@ Crea una función `convertir_a_entero(valor)` que maneje excepciones al converti
 
 
 ```python
-def convertir_a_entero(valor):
-    try:
-        return int(valor)
-    except ValueError:
-        raise ValueError("El valor proporcionado no es un entero válido.")
 
-try:
-    print(convertir_a_entero("texto"))
-except ValueError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: El valor proporcionado no es un entero válido.
-
 
 #### e. Validación de rango numérico
 
@@ -786,19 +746,8 @@ Escribe una función `verificar_rango(n, min, max)` que lance una excepción si 
 
 
 ```python
-def verificar_rango(n, min, max):
-    if not (min <= n <= max):
-        raise ValueError(f"El número {n} no está en el rango [{min}, {max}].")
-    return f"{n} está dentro del rango."
 
-try:
-    print(verificar_rango(15, 1, 10))
-except ValueError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: El número 15 no está en el rango [1, 10].
-
 
 #### f. Búsqueda en diccionario
 
@@ -806,20 +755,8 @@ Crea una función `buscar_clave(diccionario, clave)` que maneje la ausencia de u
 
 
 ```python
-def buscar_clave(diccionario, clave):
-    try:
-        return diccionario[clave]
-    except KeyError:
-        raise KeyError(f"La clave '{clave}' no se encontró en el diccionario.")
 
-try:
-    print(buscar_clave({"a": 1, "b": 2}, "c"))
-except KeyError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: "La clave 'c' no se encontró en el diccionario."
-
 
 #### g. Operación matemática personalizada
 
@@ -827,19 +764,8 @@ Escribe una función `calcular_raiz_cuadrada(n)` que maneje valores negativos la
 
 
 ```python
-def calcular_raiz_cuadrada(n):
-    if n < 0:
-        raise ValueError("No se puede calcular la raíz cuadrada de un número negativo.")
-    return n ** 0.5
 
-try:
-    print(calcular_raiz_cuadrada(-9))
-except ValueError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: No se puede calcular la raíz cuadrada de un número negativo.
-
 
 
 #### h. Validación de cadenas
@@ -848,19 +774,8 @@ Crea una función `validar_cadena(cadena)` que lance una excepción si la cadena
 
 
 ```python
-def validar_cadena(cadena):
-    if not cadena:
-        raise ValueError("La cadena no puede estar vacía.")
-    return f"La cadena es válida: {cadena}"
 
-try:
-    print(validar_cadena(""))
-except ValueError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: La cadena no puede estar vacía.
-
 
 
 #### i. Operación en archivo
@@ -869,21 +784,8 @@ Escribe una función `leer_archivo(nombre_archivo)` que maneje errores al intent
 
 
 ```python
-def leer_archivo(nombre_archivo):
-    try:
-        with open(nombre_archivo, "r") as archivo:
-            return archivo.read()
-    except FileNotFoundError:
-        raise FileNotFoundError(f"El archivo '{nombre_archivo}' no existe.")
 
-try:
-    print(leer_archivo("archivo_inexistente.txt"))
-except FileNotFoundError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: El archivo 'archivo_inexistente.txt' no existe.
-
 
 
 #### j. Validación de divisor múltiple
@@ -892,19 +794,8 @@ Crea una función `verificar_multiplo(n, divisor)` que lance una excepción si e
 
 
 ```python
-def verificar_multiplo(n, divisor):
-    if divisor % n != 0:
-        raise ValueError(f"El divisor {divisor} no es múltiplo de {n}.")
-    return f"{divisor} es múltiplo de {n}."
 
-try:
-    print(verificar_multiplo(3, 10))
-except ValueError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: El divisor 10 no es múltiplo de 3.
-
 
 #### k. Excepción personalizada para rango de edades
 
@@ -912,23 +803,8 @@ Crea una excepción personalizada llamada `EdadInvalidaError`. Escribe una funci
 
 
 ```python
-class EdadInvalidaError(Exception):
-    def __init__(self, mensaje="La edad no es válida. Debe estar entre 0 y 120."):
-        super().__init__(mensaje)
 
-def verificar_edad(edad):
-    if edad < 0 or edad > 120:
-        raise EdadInvalidaError(f"Edad inválida: {edad}")
-    return f"La edad {edad} es válida."
-
-try:
-    print(verificar_edad(150))
-except EdadInvalidaError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: Edad inválida: 150
-
 
 #### l. Excepción personalizada para formato de nombre
 
@@ -936,19 +812,7 @@ Define una excepción personalizada llamada `FormatoNombreError`. Crea una funci
 
 
 ```python
-class FormatoNombreError(Exception):
-    def __init__(self, mensaje="El nombre debe comenzar con mayúscula y no contener números."):
-        super().__init__(mensaje)
 
-def verificar_nombre(nombre):
-    if not nombre[0].isupper() or any(char.isdigit() for char in nombre):
-        raise FormatoNombreError(f"Nombre inválido: {nombre}")
-    return f"El nombre '{nombre}' es válido."
-
-try:
-    print(verificar_nombre("juan123"))
-except FormatoNombreError as e:
-    print(f"Error: {e}")
 ```
 
 #### m. Validación de entrada de número
@@ -961,27 +825,5 @@ Utiliza múltiples bloques `except` para manejar errores como `ValueError` (si e
 
 
 ```python
-class NumeroInvalidoError(Exception):
-    pass
 
-def validar_numero(numero):
-    if numero < 0:
-        raise NumeroInvalidoError("El número no puede ser negativo.")
-    if numero >= 100:
-        raise NumeroInvalidoError("El número debe ser menor que 100.")
-    return f"El número {numero} es válido."
-
-# Lógica con múltiples bloques except
-entrada = input("Introduce un número: ")
-
-try:
-    numero = float(entrada)  # Intentar convertir a número
-    print(validar_numero(numero))
-except ValueError:
-    print("Error: La entrada no es un número válido.")
-except NumeroInvalidoError as e:
-    print(f"Error: {e}")
 ```
-
-    Error: El número no puede ser negativo.
-

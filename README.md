@@ -31,8 +31,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Formas de ejecutar Python y entorno de trabajo (Google Colab)  
   Los estudiantes aprenderán las diferentes formas de ejecutar Python, como en terminales, entornos de desarrollo (IDEs), y notebooks interactivos. Se introducirá el uso de Jupyter Notebook con énfasis en Google Colab, el entorno que se utilizará durante el curso. Se explicará cómo crear y compartir notebooks, y los beneficios de trabajar en la nube.
 
-- [Clase 1 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/01_intro_2.md)  
-  Este documento complementa la clase 1, proporcionando información más detallada sobre algunos de los temas abordados y, además, introduciendo nuevos conceptos relevantes para ampliar la comprensión del contenido.
+- [Clase 1 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/01~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 2](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/02_tipos_y_variables.md):
 
@@ -42,8 +42,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Variables y asignación  
   Los estudiantes aprenderán a declarar variables, la sintaxis de asignación y las convenciones para nombrarlas. Se abordará el concepto de tipo dinámico.
 
-- [Clase 2 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/02_tipos_y_variables_2.md)  
-  Este documento complementa la clase 2, proporcionando información más detallada sobre algunos de los temas abordados y, además, introduciendo nuevos conceptos relevantes para ampliar la comprensión del contenido.
+- [Clase 2 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/02~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 3](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/03_operadores_aritmeticos_y_logicos.md):
 
@@ -53,8 +53,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Operadores de comparación  
   Se verá cómo comparar valores en Python utilizando operadores como `==`, `!=`, `<`, `>` y su uso en expresiones lógicas.
 
-- [Clase 3 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/03_operadores_aritmeticos_y_logicos_2.md)  
-  Este documento complementa la clase 3, proporcionando información más detallada sobre los distintos operadores y su precedencia, y explicando el concepto de palabra reservada en Python.
+- [Clase 3 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/03~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 4](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/04_estructuras_de_control.md):
 
@@ -64,8 +64,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Estructuras de control - Bucles `for` y `while`  
   Introducción a los bucles en Python para repetir acciones de manera eficiente.
 
-- [Clase 4 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/04_estructuras_de_control_2.md)  
-  Este documento complementa la clase 4, proporcionando información más detallada sobre las estructuras de control, la definición de bloques en Python, explicando las diferencias entre el bluce for en Python y otros lenguajes de programación, y definiendo el concepto de iterables.
+- [Clase 4 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/04~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 5](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/05_listas_tuplas_y_conjuntos.md):
 
@@ -75,7 +75,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Tuplas y conjuntos  
   Se enseñarán las diferencias entre listas, tuplas (estructuras inmutables) y conjuntos (colecciones no ordenadas sin duplicados).
 
-- [Clase 5 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/05_listas_tuplas_y_conjuntos_2.md)  
+- [Clase 5 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/05~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 6](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/06_diccionarios.md):
 
@@ -85,7 +86,8 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Manipulación de estructuras de datos  
   Se verá cómo modificar y acceder a listas, tuplas y diccionarios mediante técnicas de rebanado y comprensión de listas.
 
-- [Clase 6 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/06_diccionarios_2.md)  
+- [Clase 6 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/06~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 7](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/07_funciones.md):
 
@@ -95,6 +97,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Parámetros y retorno de valores  
   Se explicará cómo pasar parámetros a funciones y cómo devolver resultados utilizando `return`.
 
+- [Clase 7 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/07~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
+
 #### [Clase 8](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/08_funciones_avanzadas.md):
 
 - Módulo 1: Funciones avanzadas - Argumentos y parámetros opcionales  
@@ -102,6 +107,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 - Módulo 2: Alcance de las variables (Scope)  
   Se explicará el concepto de ámbito de las variables (local y global), y cómo las funciones gestionan las variables.
+
+- [Clase 8 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/08~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 9](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/09_manejo_de_errores.md):
 
@@ -111,6 +119,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Creación de excepciones personalizadas
   Los estudiantes aprenderán a crear excepciones específicas para manejar errores a medida.
 
+- [Clase 9 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/09~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
+
 #### [Clase 10](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/10_programacion_orientada_a_objetos.md):
 
 - Módulo 1: Programación Orientada a Objetos (OOP) - Introducción  
@@ -118,6 +129,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 - Módulo 2: Atributos y métodos  
   Se explicará cómo definir atributos y métodos en una clase, y cómo crear objetos que interactúan entre sí.
+
+- [Clase 10 - Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/10~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Clase 11](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/11_oop_encapsulamiento_herencia_y_polimorfismo.md):
 

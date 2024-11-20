@@ -1,4 +1,4 @@
-# Clase 7 - Material complementario
+# Clase 7: Material complementario
 
 ### 1. Funciones en Python
 

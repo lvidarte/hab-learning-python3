@@ -1,4 +1,4 @@
-# Clase 6 - Material complementario
+# Clase 6: Material complementario
 
 ### 1. Diccionarios
 

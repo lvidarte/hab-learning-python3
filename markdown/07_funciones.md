@@ -1,4 +1,4 @@
-# Clase 7: Funciones en Python, Parámetros y Retorno de Valores
+# Clase 7: Funciones en Python, parámetros y retorno de valores
 
 ## Módulo 1: Funciones en Python
 

@@ -1,4 +1,4 @@
-# Clase 2: Tipos y Variables en Python
+# Clase 2: Tipos y variables en Python
 
 ## Módulo 1: Tipos de datos en Python
 

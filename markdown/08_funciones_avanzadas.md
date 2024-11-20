@@ -1,4 +1,4 @@
-# Clase 8: Funciones Avanzadas y Alcance de las Variables (Scope)
+# Clase 8: Funciones avanzadas y alcance de las variables (scope)
 
 ## Módulo 1: Funciones avanzadas - Argumentos y parámetros opcionales
 

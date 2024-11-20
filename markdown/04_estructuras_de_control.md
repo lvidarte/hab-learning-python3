@@ -1,4 +1,4 @@
-# Clase 4: Estructuras de Control en Python
+# Clase 4: Estructuras de control en Python
 
 ## Módulo 1: Condicionales
 

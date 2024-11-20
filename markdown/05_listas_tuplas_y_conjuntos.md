@@ -1,4 +1,4 @@
-# Clase 5: Listas, Tuplas y Conjuntos
+# Clase 5: Listas, tuplas y conjuntos
 
 ## Módulo 1: Listas
 

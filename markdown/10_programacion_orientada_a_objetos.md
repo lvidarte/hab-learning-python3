@@ -1,8 +1,8 @@
-# Clase 10: Programación Orientada a Objetos (OOP)
+# Clase 10: Programación orientada a objetos (OOP)
 
-## Módulo 1: Programación Orientada a Objetos (OOP) - Introducción
+## Módulo 1: Conceptos básicos de la programación orientada a objetos
 
-### 1. Conceptos básicos de la Programación Orientada a Objetos (OOP)
+### 1. Introducción
 
 La **Programación Orientada a Objetos (OOP)** es un paradigma de programación que se basa en la creación de objetos para representar entidades del mundo real o abstracto. A través de este enfoque, el código se estructura de manera más clara, reutilizable y mantenible.
 

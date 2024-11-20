@@ -1,4 +1,4 @@
-# Clase 11: Programación Orientada a Objetos (OOP) - Encapsulamiento, Herencia y Sobrescritura de Métodos
+# Clase 11: OOP - Encapsulamiento, herencia y sobrescritura de métodos
 
 ## Módulo 1: Encapsulamiento y herencia
 

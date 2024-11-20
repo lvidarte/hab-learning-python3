@@ -1,4 +1,4 @@
-# Clase 4 - Material complementario
+# Clase 4: Material complementario
 
 ### 1. Introducción a las estructuras de control en programación
 

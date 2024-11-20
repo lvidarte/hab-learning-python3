@@ -1,8 +1,8 @@
-# Clase 9: Manejo de Errores y Excepciones
+# Clase 9: Manejo de errores y excepciones
 
-## Módulo 1: Manejo de errores y excepciones
+## Módulo 1: Manejo básico de excepciones
 
-### 1. Introducción a los errores y excepciones
+### 1. Introducción
 
 Los errores en Python pueden ocurrir debido a diversas razones, como problemas de sintaxis, referencias a variables no definidas o errores de tipo. Para manejar estos errores, se utilizan excepciones.
 

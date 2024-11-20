@@ -1,4 +1,4 @@
-# Clase 6: Diccionarios y Manipulación de Estructuras de Datos
+# Clase 6: Diccionarios y manipulación de estructuras de datos
 
 ## Módulo 1: Diccionarios
 

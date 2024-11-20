@@ -523,66 +523,283 @@ En lenguajes como Java o C++, los métodos `get_` y `set_` son comunes porque la
 
 
 ```python
+class Cuenta:
+    def __init__(self, saldo: float) -> None:
+        self.saldo = saldo
+      
+    def depositar(self, monto: float) -> None:
+        self.saldo += monto
 
+    def retirar(self, monto: float) -> None:
+        if self.saldo < monto:
+            raise ValueError("Saldo insuficiente")
+        self.saldo -= monto
+
+    def __str__(self) -> str:
+        return f"Cuenta(saldo={self.saldo})"
+
+cuenta = Cuenta(10000)
+cuenta.depositar(5000)
+cuenta.retirar(2000)
+print(cuenta)
 ```
+
+    Cuenta(saldo=13000)
+
 
 #### b. Implementa una clase Producto que lleve la cuenta de cuántas instancias se han creado.
 
 
 ```python
+class Producto:
+  contador: int = 0
 
+  def __init__(self, nombre: str, precio: float) -> None:
+    self.nombre = nombre
+    self.precio = precio
+    Producto.contador += 1
+
+for i in range(10):
+  p = Producto(f"Producto {i}", 1000)
+  print(p.nombre)
+
+print('Total instancias', Producto.contador)
 ```
 
 #### c. Crea una clase Persona que valide que la edad sea mayor que cero.
 
 
 ```python
+class Persona:
+  def __init__(self, nombre: str, edad: int) -> None:
+    self.nombre = nombre
+    self.edad = edad
 
+  @property
+  def nombre(self) -> str:
+    return self._nombre
+  
+  @nombre.setter
+  def nombre(self, valor: str) -> None:
+    if valor == '':
+        raise ValueError("El nombre no puede ser una cadena vacía.")
+    self._nombre = valor
+
+  @property
+  def edad(self) -> int:
+    return self._edad
+
+  @edad.setter
+  def edad(self, valor: int) -> None:
+    if valor <= 0:
+      raise ValueError("La edad debe ser mayor que cero.")
+    self._edad = valor
+
+persona = Persona("juan", 30)
+print(persona.nombre, persona.edad)
 ```
+
+    juan 30
+
 
 #### d. Implementa el método `__str__` para mostrar información amigable de un objeto Persona.
 
 
 ```python
+class Persona:
+  def __init__(self, nombre: str, edad: int) -> None:
+    self.nombre = nombre
+    self.edad = edad
 
+  @property
+  def nombre(self) -> str:
+    return self._nombre
+  
+  @nombre.setter
+  def nombre(self, valor: str) -> None:
+    if valor == '':
+        raise ValueError("El nombre no puede ser una cadena vacía.")
+    self._nombre = valor
+
+  @property
+  def edad(self) -> int:
+    return self._edad
+
+  @edad.setter
+  def edad(self, valor: int) -> None:
+    if valor <= 0:
+      raise ValueError("La edad debe ser mayor que cero.")
+    self._edad = valor
+
+  def __str__(self) -> str:
+    return f"Persona(nombre={self.nombre}, edad={self.edad})"
+
+
+persona = Persona("juan", 30)
+print(persona)
 ```
+
+    Persona(nombre=juan, edad=30)
+
 
 #### e. Implementa una clase Dado que permita tirar un dado de n caras. Luego maneja una serie de 3 dados usando una lista y genera los valores de cada dado iterando la lista.
 
 
 ```python
+import random
 
+class Dado:
+  def __init__(self, caras: int) -> None:
+    self.caras = caras
+
+  def tirar(self) -> int:
+    return random.randint(1, self.caras)
+
+  def __str__(self) -> str:
+    return f"Dado({self.caras})"
+
+
+dados = [Dado(6), Dado(7), Dado(15)]
+
+for dado in dados:
+  print(dado, dado.tirar())
 ```
+
+    Dado(6) 5
+    Dado(7) 5
+    Dado(15) 2
+
 
 #### f. Crea una clase Estudiante que almacene el nombre y las calificaciones de un estudiante. Luego, crea una lista de objetos Estudiante y calcula el promedio de calificaciones de todos los estudiantes.
 
 
 ```python
+class Estudiante:
+  def __init__(self, nombre: str, calificaciones: list[float]) -> None:
+    self.nombre = nombre
+    self.calificaciones = calificaciones
 
+  def promedio(self) -> float:
+        return sum(self.calificaciones) / len(self.calificaciones)
+
+estudiantes = [
+    Estudiante("Ana", [7.5, 8.0, 9.0]),
+    Estudiante("Luis", [6.0, 7.5, 8.5]),
+    Estudiante("Clara", [9.5, 9.0, 8.0]),
+]
+
+promedio_general = sum(est.promedio() for est in estudiantes) / len(estudiantes)
+print(f"Promedio general: {promedio_general:.2f}")
 ```
+
+    Promedio general: 8.11
+
 
 #### g. Crea una clase Libro con atributos como título y autor, y una clase Biblioteca que gestione una lista de libros. Agrega métodos para añadir libros, eliminar libros por título y obtener todos los libros.
 
 
 ```python
+class Libro:
+  def __init__(self, titulo: str, autor: str) -> None:
+    self.titulo = titulo
+    self.autor = autor
+
+  def __str__(self) -> str:
+    return f"Libro({self.titulo}, {self.autor})"
 
 
+class Biblioteca:
+  def __init__(self) -> None:
+    self._libros = []
+
+  def agregar_libro(self, libro: Libro) -> None:
+    if isinstance(libro, Libro):
+      self._libros.append(libro)
+
+  @property
+  def libros(self) -> list[Libro]:
+    return self._libros
+
+  def eliminar_libro(self, libro: Libro) -> bool:
+    for libro_ in self._libros:
+      if libro_ == libro:
+        self._libros.remove(libro)
+        return True
+    return False
+
+
+biblioteca = Biblioteca()
+biblioteca.agregar_libro(Libro("El principito", "Antoine de Saint-Exupéry"))
+biblioteca.agregar_libro(Libro("Don Quijote de la Mancha", "Miguel de Cervantes"))
+biblioteca.agregar_libro(Libro("1984", "George Orwell"))
+
+for libro in biblioteca.libros:
+  print(libro)
 ```
+
+    Libro(El principito, Antoine de Saint-Exupéry)
+    Libro(Don Quijote de la Mancha, Miguel de Cervantes)
+    Libro(1984, George Orwell)
+
 
 #### h. Crea una clase Curso que gestione una lista de estudiantes y permita calcular el promedio del curso. Utiliza la clase Estudiante del ejercicio f.
 
 
 ```python
+class Curso:
+    def __init__(self, nombre: str):
+        self.nombre = nombre
+        self._estudiantes = []
 
+    def agregar_estudiante(self, estudiante: Estudiante) -> None:
+        self._estudiantes.append(estudiante)
+
+    def promedio_curso(self) -> float:
+        return sum(est.promedio() for est in self._estudiantes) / len(self._estudiantes)
+
+curso = Curso("Matemáticas")
+curso.agregar_estudiante(Estudiante("Pedro", [7, 8, 9]))
+curso.agregar_estudiante(Estudiante("María", [6, 6, 7]))
+print(f"Promedio del curso: {curso.promedio_curso():.2f}")
 ```
+
+    Promedio del curso: 7.17
+
 
 #### i. Crea una clase Auto y una clase Concesionaria para gestionar autos.
 
 
 ```python
+class Auto:
+    def __init__(self, marca: str, modelo: str, precio: float):
+        self.marca = marca
+        self.modelo = modelo
+        self.precio = precio
 
+    def __str__(self) -> str:
+        return f"{self.marca} {self.modelo} - ${self.precio:.2f}"
 
+class Concesionaria:
+    def __init__(self):
+        self._autos = []
+
+    def agregar_auto(self, auto: Auto) -> None:
+        self._autos.append(auto)
+
+    def autos(self) -> list:
+        return self._autos
+
+concesionaria = Concesionaria()
+concesionaria.agregar_auto(Auto("Toyota", "Corolla", 20000))
+concesionaria.agregar_auto(Auto("Ford", "Focus", 18000))
+
+for auto in concesionaria.autos():
+    print(auto)
 ```
+
+    Toyota Corolla - $20000.00
+    Ford Focus - $18000.00
+
 
 #### j. Carrito de Compras
 
@@ -600,8 +817,64 @@ Representa el carrito de compras. Tendrá métodos para:
 
 
 ```python
+class Producto:
 
+    def __init__(self, nombre: str, precio_unitario: float, cantidad: int) -> None:
+        self._nombre = nombre
+        self._precio_unitario = precio_unitario
+        self._cantidad = cantidad
+
+    def subtotal(self):
+        return self._precio_unitario * self._cantidad
+
+    def __str__(self):
+        return f"Producto(nombre={self._nombre}, subtotal=${self.subtotal()})"
+
+
+class Carrito:
+
+    def __init__(self):
+        self._productos = []
+
+    def agregar_producto(self, producto: Producto) -> None:
+        self._productos.append(producto)
+
+    def eliminar_producto(self, producto: Producto) -> bool:
+        for producto_ in self._productos:
+            if producto_ == producto:
+                self._productos.remove(producto)
+                return True
+        return False
+
+    def total(self) -> float:
+        return sum(producto.subtotal() for producto in self._productos)
+    
+
+productos = [
+    Producto("Manzanas", 1, 4),
+    Producto("Bebida", 10, 2),
+]
+
+carrito = Carrito()
+
+for producto in productos:
+    carrito.agregar_producto(producto)
+
+print(f'Total carrito: ${carrito.total()}')
+
+
+if carrito.eliminar_producto(productos[1]):
+    print(f"Producto eliminado: {productos[1]}")
+else:
+    print("No se encontró el producto")
+
+print(f'Total carrito: ${carrito.total()}')
 ```
+
+    Total carrito: $24
+    Producto eliminado: Producto(nombre=Bebida, subtotal=$20)
+    Total carrito: $4
+
 
 ---
 
@@ -661,11 +934,11 @@ class Tortuga:
     def __init__(self, x, y):
         self.tortuga = Turtle()
         self.tortuga.jumpto(x, y)
-        self.tortuga.fillcolor(choice(colors))
 
     def poligono_al_azar(self, largo: int) -> None:
         lados = randint(3, 11)
         print(f"Dibujando polígono de {lados} lados")
+        self.tortuga.fillcolor(choice(colors))
         self.tortuga.begin_fill()
         for _ in range(lados):
             self.tortuga.forward(largo)

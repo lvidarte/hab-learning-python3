@@ -183,6 +183,7 @@ class Ejemplo:
     def __init__(self):
         self.__dato_privado = 42
 
+
 obj = Ejemplo()
 # print(obj.__dato_privado)  # Esto genera un AttributeError
 print(obj._Ejemplo__dato_privado)  # Acceso indirecto al atributo
@@ -249,6 +250,7 @@ class Persona:
     def __repr__(self):
         return f"Persona(nombre='{self.nombre}', edad={self.edad})"
 
+
 Persona("Jairo", 30)
 ```
 
@@ -277,6 +279,7 @@ class Persona:
 
     def __str__(self):
         return f"{self.nombre}, {self.edad} años"
+
 
 p = Persona("Jairo", 30)
 print(p)
@@ -308,6 +311,7 @@ class Persona:
     def __str__(self):
         return f"{self.nombre} tiene {self.edad} años."
 
+
 p = Persona("Jairo", 30)
 
 print(repr(p))
@@ -327,6 +331,7 @@ Aquí un ejemplo completo de uso correcto de docstrings en clases.
 
 ```python
 from typing import Union
+
 
 class Calculadora:
     """
@@ -538,6 +543,7 @@ class Cuenta:
     def __str__(self) -> str:
         return f"Cuenta(saldo={self.saldo})"
 
+
 cuenta = Cuenta(10000)
 cuenta.depositar(5000)
 cuenta.retirar(2000)
@@ -559,12 +565,26 @@ class Producto:
     self.precio = precio
     Producto.contador += 1
 
+
 for i in range(10):
   p = Producto(f"Producto {i}", 1000)
   print(p.nombre)
 
 print('Total instancias', Producto.contador)
 ```
+
+    Producto 0
+    Producto 1
+    Producto 2
+    Producto 3
+    Producto 4
+    Producto 5
+    Producto 6
+    Producto 7
+    Producto 8
+    Producto 9
+    Total instancias 10
+
 
 #### c. Crea una clase Persona que valide que la edad sea mayor que cero.
 
@@ -594,6 +614,7 @@ class Persona:
     if valor <= 0:
       raise ValueError("La edad debe ser mayor que cero.")
     self._edad = valor
+
 
 persona = Persona("juan", 30)
 print(persona.nombre, persona.edad)
@@ -648,6 +669,7 @@ print(persona)
 ```python
 import random
 
+
 class Dado:
   def __init__(self, caras: int) -> None:
     self.caras = caras
@@ -665,9 +687,9 @@ for dado in dados:
   print(dado, dado.tirar())
 ```
 
-    Dado(6) 5
+    Dado(6) 4
     Dado(7) 5
-    Dado(15) 2
+    Dado(15) 5
 
 
 #### f. Crea una clase Estudiante que almacene el nombre y las calificaciones de un estudiante. Luego, crea una lista de objetos Estudiante y calcula el promedio de calificaciones de todos los estudiantes.
@@ -681,6 +703,7 @@ class Estudiante:
 
   def promedio(self) -> float:
         return sum(self.calificaciones) / len(self.calificaciones)
+
 
 estudiantes = [
     Estudiante("Ana", [7.5, 8.0, 9.0]),
@@ -757,6 +780,7 @@ class Curso:
     def promedio_curso(self) -> float:
         return sum(est.promedio() for est in self._estudiantes) / len(self._estudiantes)
 
+
 curso = Curso("Matemáticas")
 curso.agregar_estudiante(Estudiante("Pedro", [7, 8, 9]))
 curso.agregar_estudiante(Estudiante("María", [6, 6, 7]))
@@ -779,6 +803,7 @@ class Auto:
     def __str__(self) -> str:
         return f"{self.marca} {self.modelo} - ${self.precio:.2f}"
 
+
 class Concesionaria:
     def __init__(self):
         self._autos = []
@@ -788,6 +813,7 @@ class Concesionaria:
 
     def autos(self) -> list:
         return self._autos
+
 
 concesionaria = Concesionaria()
 concesionaria.agregar_auto(Auto("Toyota", "Corolla", 20000))
@@ -848,7 +874,7 @@ class Carrito:
 
     def total(self) -> float:
         return sum(producto.subtotal() for producto in self._productos)
-    
+
 
 productos = [
     Producto("Manzanas", 1, 4),
@@ -861,7 +887,6 @@ for producto in productos:
     carrito.agregar_producto(producto)
 
 print(f'Total carrito: ${carrito.total()}')
-
 
 if carrito.eliminar_producto(productos[1]):
     print(f"Producto eliminado: {productos[1]}")
@@ -900,6 +925,7 @@ Con `ColabTurtlePlus`, puedes crear y controlar múltiples tortugas, lo que sign
 ```python
 from ColabTurtlePlus.Turtle import Turtle, clearscreen, setup, speed, hideturtle
 
+
 clearscreen()
 setup(800, 500)
 speed(11)
@@ -923,12 +949,14 @@ tortuga2.forward(50)
 ```python
 from random import randint, choice
 
+
 clearscreen()
 setup(800, 500)
 hideturtle() # Tortuga por defecto
 speed(11)
 
 colors = ['red', 'green', 'blue', 'yellow', 'purple', 'cyan']
+
 
 class Tortuga:
     def __init__(self, x, y):
@@ -944,6 +972,7 @@ class Tortuga:
             self.tortuga.forward(largo)
             self.tortuga.right(360/lados)
         self.tortuga.end_fill()
+
 
 tortugas = []
 for _ in range(10):

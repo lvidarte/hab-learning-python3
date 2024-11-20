@@ -1,4 +1,4 @@
-# Operadores en Python - Material complementario
+# Clase 3 - Material complementario
 
 ### 1. ¿Qué es un operador?
 

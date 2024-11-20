@@ -1,4 +1,4 @@
-# Funciones Avanzadas y Alcance de las Variables (Scope) - Material complementario
+# Clase 8 - Material complementario
 
 ### 1. Introducción a los parámetros variables en Python
 

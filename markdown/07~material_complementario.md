@@ -1,4 +1,4 @@
-# Funciones en Python, Parámetros y Retorno de Valores - Material complementario
+# Clase 7 - Material complementario
 
 ### 1. Funciones en Python
 

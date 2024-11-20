@@ -1,4 +1,4 @@
-# Diccionarios y Manipulación de Estructuras de Datos - Material complementario
+# Clase 6 - Material complementario
 
 ### 1. Diccionarios
 

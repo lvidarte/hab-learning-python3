@@ -1,4 +1,4 @@
-# Introducción a Python 3 - Material complementario
+# Clase 1 - Material complementario
 
 ### 1. Historia de Python
 

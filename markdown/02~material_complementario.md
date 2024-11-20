@@ -1,4 +1,4 @@
-# Tipos y Variables en Python - Material complementario
+# Clase 2 - Material complementario
 
 ### 1. ¿Qué es un programa?
 

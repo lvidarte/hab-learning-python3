@@ -1,4 +1,4 @@
-# Clase 11: OOP - Encapsulamiento, herencia y sobrescritura de métodos
+# Clase 11: OOP - Encapsulamiento, herencia y polimorfismo
 
 ## Módulo 1: Encapsulamiento y herencia
 
@@ -13,37 +13,38 @@ En Python, los atributos o métodos pueden indicarse como "privados" utilizando 
 
 ```python
 class CuentaBancaria:
-    def __init__(self, saldo_inicial):
+    def __init__(self, saldo_inicial: float):
         self.__saldo = saldo_inicial  # Atributo privado
 
-    # Método público para consultar el saldo
-    def saldo(self):
+    @property
+    def saldo(self) -> float:
         return self.__saldo
 
     # Método público para depositar dinero
-    def depositar(self, monto):
+    def depositar(self, monto: float) -> None:
         if monto > 0:
             self.__saldo += monto
 
     # Método público para retirar dinero
-    def retirar(self, monto):
-        if monto <= self.__saldo:
-            self.__saldo -= monto
-        else:
-            print("Fondos insuficientes")
-
+    def retirar(self, monto: float) -> None:
+        if not self.__hay_fondos(monto):
+            raise Exception("Fondos insuficientes")
+        self.__saldo -= monto
+        
+    # Método privado para chequear que existan fondos
+    def __hay_fondos(self, monto: float) -> bool:
+        return self.__saldo >= monto
+    
+    # Método privado (dunder method)
+    def __str__(self) -> str:
+        return f"CuentaBancaria(saldo={self.__saldo})"
 ```
 
 
 ```python
-# Crear una cuenta bancaria
+# Crear una cuenta bancaria.
 cuenta = CuentaBancaria(500)
-```
-
-
-```python
-# Consultar el saldo
-print(cuenta.saldo())
+print(cuenta.saldo)
 ```
 
     500
@@ -51,7 +52,7 @@ print(cuenta.saldo())
 
 
 ```python
-# Intentar modificar directamente el saldo (esto no debería hacerse)
+# Intentar modificar directamente el saldo (esto no debería hacerse).
 try:
     cuenta.__saldo == 10000  # Producirá un AttributeError
 except AttributeError as e:
@@ -63,21 +64,34 @@ except AttributeError as e:
 
 
 ```python
-# Usar los métodos para modificar el saldo
+# Usar los métodos para modificar el saldo.
 cuenta.depositar(200)
-print(cuenta.saldo())
+print(cuenta.saldo)
 ```
 
-    900
+    700
 
 
 
 ```python
+# Usar los métodos para retirar dinero.
 cuenta.retirar(100)
-print(cuenta.saldo())
+print(cuenta)
 ```
 
-    800
+    CuentaBancaria(saldo=600)
+
+
+
+```python
+# El intento de retirar un monto mayor al saldo provoca una excepción.
+try:
+    cuenta.retirar(900)
+except Exception as e:
+    print(e)
+```
+
+    Fondos insuficientes
 
 
 En este ejemplo, el atributo `__saldo` es privado y solo puede ser accedido y modificado a través de los métodos `saldo()`, `depositar()` y `retirar()`. Esto asegura que los cambios en el saldo siempre sean controlados.
@@ -158,11 +172,11 @@ Crea una clase `Electrodomestico` con atributos `marca` y `modelo`, y un método
 
 ---
 
-## Módulo 2: Sobrescritura de métodos
+## Módulo 2: Polimorfismo
 
 ### 1. Sobrescritura de métodos
 
-La **sobrescritura de métodos** (method overriding) permite que una clase derivada redefina un método heredado de su clase padre, cambiando su comportamiento o extendiéndolo. Esto es útil cuando la clase hija necesita implementar un comportamiento específico sin modificar la clase base.
+El polimorfismo es un concepto fundamental de la programación orientada a objetos que significa "muchas formas". Permite que un mismo método pueda comportarse de manera diferente según el objeto con el que se utilice. Python soporta polimorfismo a través de la herencia.
 
 #### a. Ejemplo
 

@@ -133,12 +133,12 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - [Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/10~material_complementario.md)  
   Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
-#### [Clase 11](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/11_oop_encapsulamiento_herencia_y_polimorfismo.md): OOP - Encapsulamiento, herencia y sobrescritura de métodos
+#### [Clase 11](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/11_oop_encapsulamiento_herencia_y_polimorfismo.md): OOP - Encapsulamiento, herencia y polimorfismo
 
 - Módulo 1: Encapsulamiento y herencia  
   Introducción a la encapsulación y herencia, dos pilares de la OOP que permiten organizar mejor el código.
 
-- Módulo 2: Sobrescritura de métodos  
+- Módulo 2: Polimorfismo
   Se enseñará cómo modificar o extender el comportamiento de los métodos heredados en una clase hija.
 
 #### [Clase 12](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/12_lectura_de_archivos.md): Lectura y escritura de archivos y revisión de conceptos principales

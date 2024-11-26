@@ -141,6 +141,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 - Módulo 2: Polimorfismo
   Se enseñará cómo modificar o extender el comportamiento de los métodos heredados en una clase hija.
 
+- [Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/11~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
+
 #### [Clase 12](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/12_lectura_de_archivos.md): Lectura y escritura de archivos y revisión de conceptos principales
 
 - Módulo 1: Lectura y escritura de archivos  
@@ -148,6 +151,9 @@ Este curso de Introducción a Python 3 cubre los conceptos básicos de programac
 
 - Módulo 2: Revisión de conceptos principales  
   Repaso general de los conceptos principales del curso, aclaración de dudas y consolidación de conocimientos clave.
+
+- [Material complementario](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/12~material_complementario.md)  
+  Este documento proporciona información más detallada sobre algunos de los temas abordados e introduce nuevos conceptos relevantes, para ampliar la comprensión del contenido.
 
 #### [Anexo](https://github.com/lvidarte/hab-learning-python3/blob/main/markdown/98_anexo.md):
 

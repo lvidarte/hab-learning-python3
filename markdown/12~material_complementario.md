@@ -409,6 +409,61 @@ Otro ejemplo sería un árbol navideño:
 
 Para explorar más ejemplos y aprender sobre cómo crear tu propio arte ASCII, puedes visitar [ASCII Art.eu](https://www.asciiart.eu/), un sitio web dedicado a esta forma de arte.
 
+
+#### d. ASCII Art en Python
+
+En Python hay varios módulos que permiten generar ASCII art de manera sencilla. Uno de los más populares es el módulo pyfiglet. Este módulo convierte texto en arte ASCII utilizando una variedad de fuentes.
+
+
+```python
+# Instalación
+!pip install pyfiglet
+```
+
+
+```python
+import pyfiglet
+
+# Obtener todos los tipos de fuentes
+fonts = pyfiglet.FigletFont.getFonts()
+
+# Mostrar las fuentes en columnas
+cols = 5
+for i, font in enumerate(fonts[:30]):
+    print(f"{font:<20}", end='')
+    if (i + 1) % cols == 0:
+        print()
+```
+
+    clb6x10             nipples             amc_3_liv1          muzzle              computer            
+    electronic          charact1            xtty                xcourb              xchartr             
+    ghoulish            future_1            lcd                 letters             fp2_____            
+    rev                 caus_in_            roman___            barbwire            threepoint          
+    smkeyboard          couri               impossible          1943____            bright              
+    heroboti            madrid              grand_pr            3-d                 radical_            
+
+
+
+```python
+ascii_art = pyfiglet.figlet_format("Hola Pythonistas", font="slant")
+print(ascii_art)
+```
+
+        __  __      __     
+       / / / /___  / /___ _
+      / /_/ / __ \/ / __ `/
+     / __  / /_/ / / /_/ / 
+    /_/ /_/\____/_/\__,_/  
+                           
+        ____        __  __                _      __            
+       / __ \__  __/ /_/ /_  ____  ____  (_)____/ /_____ ______
+      / /_/ / / / / __/ __ \/ __ \/ __ \/ / ___/ __/ __ `/ ___/
+     / ____/ /_/ / /_/ / / / /_/ / / / / (__  ) /_/ /_/ (__  ) 
+    /_/    \__, /\__/_/ /_/\____/_/ /_/_/____/\__/\__,_/____/  
+          /____/                                               
+    
+
+
 ---
 
 ### 6. Caracteres especiales
@@ -460,11 +515,35 @@ Diferentes sistemas adoptaron maneras distintas de manejar los saltos de línea:
 
 #### e. Otros caracteres especiales comunes
 
-| **Carácter**      | **Secuencia** | **Descripción**                                       |
-|-------------------|---------------|-------------------------------------------------------|
-| Tabulación        | `\t`          | Inserta un espacio de tabulación (horizontal tab).    |
-| Retorno de carro  | `\r`          | Mueve el cursor al inicio de la línea actual.         |
-| Espacio           | `\s` (a veces)| Representa un espacio en blanco explícito.            |
-| Comillas dobles   | `\"`          | Representa una comilla doble en un texto escapado.    |
-| Comillas simples  | `\'`          | Representa una comilla simple en un texto escapado.   |
-| Barra invertida   | `\\`          | Inserta un carácter de barra invertida (`\`).         |
+| **Carácter**      | **Secuencia** | **Descripción**                                               |
+|-------------------|---------------|---------------------------------------------------------------|
+| Tabulación        | `\t`          | Inserta un espacio de tabulación (horizontal tab).            |
+| Retorno de carro  | `\r`          | Mueve el cursor al inicio de la línea actual.                 |
+| Espacio           | `\s` (a veces)| Representa un espacio en blanco explícito.                    |
+| Comillas dobles   | `\"`          | Representa una comilla doble en un texto escapado.            |
+| Comillas simples  | `\'`          | Representa una comilla simple en un texto escapado.           |
+| Barra invertida   | `\\`          | Inserta un carácter de barra invertida (`\`).                 |
+| Backspace         | `\b`          | Mueve el cursor hacia atrás, eliminando el carácter anterior. |
+
+#### f. Animación simple usando el caracter backspace ('\b')
+
+
+```python
+import time
+
+for char in "Hola, Mundo!":
+    print(char, end='', flush=True)
+    time.sleep(0.2)
+time.sleep(1)
+
+# Ahora borramos la palabra "Mundo!"
+for _ in range(6):  # El tamaño de la palabra "Mundo!"
+    print('\b', end='', flush=True)  #  chr(8)  chr(0x08)  chr(0b0000100)  '\b'  '\x08'
+    time.sleep(0.2)
+time.sleep(0.5)
+
+# Escribimos la nueva palabra
+print("Python!", end='', flush=True)
+```
+
+    Hola, Python!

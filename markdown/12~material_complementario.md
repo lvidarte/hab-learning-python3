@@ -60,7 +60,7 @@ $ ps
 Con el PID del proceso (Identificador del proceso o Process ID) usaremos `lsof` (List Open Files) para ver los archivos abiertos por el proceso.
 
 ```bash
-lsof -p 13074
+$ lsof -p 13074
 COMMAND   PID USER    FD  TYPE DEVICE SIZE/OFF     NODE NAME
 Python  13074  leo    2u   CHR   16,6    0t598      729 /dev/ttys006
 Python  13074  leo    3w   REG    1,7        5 74009293 /Users/leo/example.txt
@@ -69,7 +69,7 @@ Python  13074  leo    3w   REG    1,7        5 74009293 /Users/leo/example.txt
 `lsof` también nos muestra que la terminal tiene otro archivo abierto: `/dev/ttys006`, así que podemos usar `echo` para escribir en ese archivo y ver la salida en la misma terminal interactiva.
 
 ```bash
-echo "hola pythonistas" >> /dev/ttys006
+$ echo "hola pythonistas" >> /dev/ttys006
 ```
 
 ---

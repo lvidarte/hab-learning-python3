@@ -11,11 +11,14 @@ En Python, se pueden leer archivos utilizando la función `open()` en combinaci�
 
 ```python
 # Abrir un archivo en modo lectura
-with open("archivo.txt", "r") as archivo:
-    contenido = archivo.read()
-
-# Mostrar el contenido del archivo
-print(contenido)
+try:
+    with open("archivo.txt", "r") as archivo:
+        contenido = archivo.read()
+except FileNotFoundError as e:
+    print(e)
+else:
+    # Mostrar el contenido del archivo
+    print(contenido)
 ```
 
     Esta es una nueva línea de texto.
@@ -68,7 +71,7 @@ Python ofrece soporte nativo para manipular archivos CSV (valores separados por 
 import csv
 
 # Leer un archivo CSV
-with open("datos.csv", newline='') as archivo_csv:
+with open("archivo.csv", newline='') as archivo_csv:
     lector = csv.reader(archivo_csv)
     for fila in lector:
         print(fila)
@@ -88,7 +91,7 @@ Este ejemplo muestra cómo leer un archivo CSV y mostrar cada fila como una list
 import csv
 
 # Escribir en un archivo CSV
-with open("datos.csv", "w", newline='') as archivo_csv:
+with open("archivo.csv", "w", newline='') as archivo_csv:
     escritor = csv.writer(archivo_csv)
     escritor.writerow(["Nombre", "Edad", "Ciudad"])
     escritor.writerow(["Ana", 28, "Buenos Aires"])

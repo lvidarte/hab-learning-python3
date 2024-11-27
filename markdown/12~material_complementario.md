@@ -47,6 +47,7 @@ Hagamos una prueba con el intérprete interactivo, en el cual abriremos un archi
 ```python
 >>> archivo = open("example.txt", "w")
 >>> archivo.fileno() # Obtenemos su FD
+3
 ```
 
 En otra terminal usaremos `ps` (Process Status) para ver los procesos del usuario.
